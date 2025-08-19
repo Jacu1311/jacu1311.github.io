@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Alejandro Correa Usuga - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3498db",
+              dark: "#2c3e50",
+              light: "#ecf0f1",
+            },
+            animation: {
+              pulseSlow: "pulse 4s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body
+    class="bg-light text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors"
+  >
+    <!-- Language + Theme Toggle -->
+    <div class="fixed top-4 right-4 flex gap-4 z-50">
+      <button
+        id="themeToggle"
+        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black"
+      >
+        Toggle Theme
+      </button>
+      <button
+        id="langToggle"
+        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black"
+      >
+        ES/EN
+      </button>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="fixed top-0 w-full bg-dark text-white z-40 shadow-md dark:bg-gray-800"
+    >
+      <nav class="container mx-auto px-6 py-4 flex justify-center">
+        <ul class="flex space-x-6 font-semibold">
+          <li>
+            <a href="#home" class="hover:text-primary" data-i18n="Home">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="hover:text-primary" data-i18n="About"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#education"
+              class="hover:text-primary"
+              data-i18n="Education"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="hover:text-primary"
+              data-i18n="Experience"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-primary" data-i18n="Contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section
+      id="home"
+      class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 bg-cover bg-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1516321310766-61f6f7c0b5e5');
+      "
+    >
+      <div
+        class="bg-white bg-opacity-80 dark:bg-gray-800 dark:bg-opacity-80 p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6"
+      >
+        <div class="relative">
+          <div
+            class="absolute inset-0 rounded-full animate-pulseSlow border-4 border-primary opacity-50"
+          ></div>
+          <img
+            src="https://media.licdn.com/dms/image/v2/D4E03AQHeMtBaDRwDFQ/profile-displayphoto-shrink_800_800/B4EZWwbjLWG0Ac-/0/1742421767235?e=1757548800&v=beta&t=vGUkuGHTfxG1S5QRsDlPKvuFsyZ9PDkU5fHerSRIJmQ"
+            alt="Profile Picture"
+            class="w-36 h-36 rounded-full border-4 border-primary object-cover relative z-10"
+          />
+        </div>
+        <div>
+          <h1 class="text-3xl font-bold">John Alejandro Correa Usuga</h1>
+          <p class="text-lg mt-2" data-i18n="Role">
+            Software Developer Specializing in Data Analytics
+          </p>
+          <a
+            href="https://www.linkedin.com/in/jacu-c13"
+            target="_blank"
+            class="inline-block mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-blue-700"
+            >LinkedIn Profile</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-20 bg-cover bg-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f');
+      "
+    >
+      <div
+        class="container mx-auto px-6 max-w-4xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg"
+      >
+        <h2 class="text-2xl font-bold mb-4 text-dark">About Me</h2>
+        <p class="mb-6">
+          Software developer specializing in data analytics, skilled in teamwork
+          and customer relations. Proficient in multiple programming languages
+          and technologies, with a focus on delivering efficient and secure
+          solutions.
+        </p>
+        <h3 class="text-xl font-semibold mb-2">Skills</h3>
+        <ul class="flex flex-wrap gap-2 mb-6">
+          <li class="bg-primary text-white px-3 py-1 rounded">C++</li>
+          <li class="bg-primary text-white px-3 py-1 rounded">Python</li>
+          <li class="bg-primary text-white px-3 py-1 rounded">Javascript</li>
+          <li class="bg-primary text-white px-3 py-1 rounded">SQL</li>
+          <li class="bg-primary text-white px-3 py-1 rounded">Git</li>
+          <li class="bg-primary text-white px-3 py-1 rounded">Troubleshooting</li>
+          <li class="bg-primary text-white px-3 py-1 rounded">Detail Oriented</li>
+          <li class="bg-primary text-white px-3 py-1 rounded">Teamwork</li>
+          <li class="bg-primary text-white px-3 py-1 rounded">Analysis</li>
+          <li class="bg-primary text-white px-3 py-1 rounded">Writing</li>
+
+        </ul>
+        <h3 class="text-xl font-semibold mb-2" data-i18n="Languages">Languages</h3>
+        <div class="space-y-4 flex-col">
+          <div>
+            <p class="font-semibold">Español (Nativo)</p>
+            <div class="flex space-x-1 mt-2">
+              <span class="w-5 h-2 rounded bg-primary"></span>
+              <span class="w-5 h-2 rounded bg-primary"></span>
+              <span class="w-5 h-2 rounded bg-primary"></span>
+              <span class="w-5 h-2 rounded bg-primary"></span>
+              <span class="w-5 h-2 rounded bg-primary"></span>
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold">English (Advanced C1)</p>
+            <div class="flex space-x-1 mt-2">
+              <span class="w-5 h-2 rounded bg-primary"></span>
+              <span class="w-5 h-2 rounded bg-primary"></span>
+              <span class="w-5 h-2 rounded bg-primary"></span>
+              <span class="w-5 h-2 rounded bg-primary"></span>
+              <span class="w-5 h-2 rounded bg-gray-300 dark:bg-gray-700"></span>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold">Driving License</h3>
+        <p>Categories: A2, B1</p>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section
+      id="education"
+      class="py-20 bg-cover bg-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a');
+      "
+    >
+      <div
+        class="container mx-auto px-6 max-w-3xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg"
+      >
+        <h2 class="text-2xl font-bold mb-4 text-dark">Education</h2>
+        <div>
+          <h3 class="text-xl font-semibold">Software Engineer, B.S.</h3>
+          <p>Tecnológico de Antioquia Institución Universitaria, Medellín</p>
+          <p class="text-sm text-gray-600">Graduated: 2024</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section
+      id="experience"
+      class="py-20 bg-cover bg-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1516321310766-61f6f7c0b5e5');
+      "
+    >
+      <div
+        class="container mx-auto px-6 max-w-4xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg"
+      >
+        <h2 class="text-2xl font-bold mb-4 text-dark">Work Experience</h2>
+        <!-- Repeat for each experience -->
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold">
+            Bilingual Implementation Analyst
+          </h3>
+          <p class="italic">Evertec Inc, Medellín | Feb 2025 - Apr 2025</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>
+              Created 1 layout template with React and Tailwind to optimize
+              sales and implementation processes.
+            </li>
+            <li>Complied with SLAs.</li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold">
+            Practicante de Excelencia (Internship)
+          </h3>
+          <p class="italic">
+            Gobernación de Antioquia, Medellín | Feb 2024 - Jun 2024
+          </p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>
+              Improved a platform made in Laravel (PHP) with PostgreSQL,
+              cleaning and refactoring more than 30 files.
+            </li>
+            <li>
+              Solved 6 security breaches within headers and server settings.
+            </li>
+            <li>Documented 5 processes and additions in Markdown format.</li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold">Bilingual Support Agent</h3>
+          <p class="italic">Webhelp, Medellín | Mar 2022 - Feb 2024</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>
+              Provided customer support for technical, legal, and
+              product-related inquiries with over 90% customer satisfaction
+              ratio.
+            </li>
+            <li>Presented 4 workshops for efficiency improvement.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Junior Developer</h3>
+          <p class="italic">Areatic, Medellín | Jul 2019 - Dec 2021</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>
+              Implemented a computational vision library with C++ for automated
+              license plate recognition with over 88% accuracy.
+            </li>
+            <li>
+              Developed 2 TCP/IP sockets in C++ and Python for real-time license
+              plate submission.
+            </li>
+            <li>Implemented video streaming protocols as RTSP.</li>
+            <li>
+              Created 2 web modules with Angular (JS) to audit the automated
+              license plate recognition.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (Updated) -->
+    <section
+      id="contact"
+      class="py-20 bg-cover bg-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f');
+      "
+    >
+      <div
+        class="container mx-auto px-6 max-w-3xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center dark:bg-gray-800 dark:bg-opacity-80"
+      >
+        <h2
+          class="text-2xl font-bold mb-4 text-dark dark:text-white"
+          data-i18n="Contact"
+        >
+          Contact
+        </h2>
+        <p class="mb-2 flex justify-center items-center gap-2">
+          <i class="ph ph-envelope text-primary"></i><span>Email:</span>
+          <a href="mailto:jacu.13c@gmail.com" class="text-primary"
+            >jacu.13c@gmail.com</a
+          >
+        </p>
+        <p class="mb-2 flex justify-center items-center gap-2">
+          <i class="ph ph-phone text-primary"></i><span>Phone:</span> +57
+          3203161289
+        </p>
+        <p class="mb-4 flex justify-center items-center gap-2">
+          <i class="ph ph-map-pin text-primary"></i
+          ><span>Location:</span> Medellín, Colombia
+        </p>
+        <a
+          href="https://wa.me/573203161289"
+          target="_blank"
+          class="inline-block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+          >Contact via WhatsApp</a
+        >
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("nav a").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const section = document.getElementById(targetId);
+            section.scrollIntoView({ behavior: "smooth" });
+          });
+        });
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById("themeToggle");
+        themeToggle.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark");
+        });
+
+        // Language Toggle
+        const i18nMap = {
+          en: {
+            Home: "Home",
+            About: "About",
+            Education: "Education",
+            Experience: "Experience",
+            Contact: "Contact",
+            Languages: "Languages",
+            Role: "Software Developer Specializing in Data Analytics",
+          },
+          es: {
+            Home: "Inicio",
+            About: "Sobre mí",
+            Education: "Educación",
+            Experience: "Experiencia",
+            Contact: "Contacto",
+            Languages: "Idiomas",
+            Role: "Desarrollador de Software especializado en Analítica de Datos",
+          },
+        };
+        let currentLang = "en";
+        const langToggle = document.getElementById("langToggle");
+        langToggle.addEventListener("click", () => {
+          currentLang = currentLang === "en" ? "es" : "en";
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            if (i18nMap[currentLang][key]) {
+              el.textContent = i18nMap[currentLang][key];
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
