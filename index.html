@@ -31,21 +31,23 @@
     <div class="fixed top-4 right-4 flex gap-4 z-50">
       <button
         id="themeToggle"
-        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black"
+        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
+        aria-label="Toggle theme"
       >
-        Toggle Theme
+        <i class="ph ph-sun dark:ph-moon text-xl"></i>
       </button>
       <button
         id="langToggle"
-        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black"
+        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
+        aria-label="Toggle language"
       >
-        ES/EN
+        <i class="ph ph-translate text-xl"></i>
       </button>
     </div>
 
     <!-- Header -->
     <header
-      class="fixed top-0 w-full bg-dark text-white z-40 shadow-md dark:bg-gray-800"
+      class="fixed top-0 w-full bg-dark text-white z-40 shadow-md dark:bg-gray-800 transition-colors"
     >
       <nav class="container mx-auto px-6 py-4 flex justify-center">
         <ul class="flex space-x-6 font-semibold">
@@ -112,6 +114,7 @@
             href="https://www.linkedin.com/in/jacu-c13"
             target="_blank"
             class="inline-block mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-blue-700"
+            data-i18n="Linkedin"
             >LinkedIn Profile</a
           >
         </div>
@@ -127,33 +130,33 @@
       "
     >
       <div
-        class="container mx-auto px-6 max-w-4xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg"
+        class="container mx-auto px-6 max-w-4xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-8 rounded-lg shadow-lg text-gray-800 dark:text-gray-100 transition-colors"
       >
-        <h2 class="text-2xl font-bold mb-4 text-dark">About Me</h2>
-        <p class="mb-6">
+        <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="About">About Me</h2>
+        <p class="mb-6" data-i18n="Description">
           Software developer specializing in data analytics, skilled in teamwork
           and customer relations. Proficient in multiple programming languages
           and technologies, with a focus on delivering efficient and secure
           solutions.
         </p>
-        <h3 class="text-xl font-semibold mb-2">Skills</h3>
+        <h3 class="text-xl font-semibold mb-2" data-i18n="Skills">Skills</h3>
         <ul class="flex flex-wrap gap-2 mb-6">
           <li class="bg-primary text-white px-3 py-1 rounded">C++</li>
           <li class="bg-primary text-white px-3 py-1 rounded">Python</li>
           <li class="bg-primary text-white px-3 py-1 rounded">Javascript</li>
           <li class="bg-primary text-white px-3 py-1 rounded">SQL</li>
           <li class="bg-primary text-white px-3 py-1 rounded">Git</li>
-          <li class="bg-primary text-white px-3 py-1 rounded">Troubleshooting</li>
-          <li class="bg-primary text-white px-3 py-1 rounded">Detail Oriented</li>
-          <li class="bg-primary text-white px-3 py-1 rounded">Teamwork</li>
-          <li class="bg-primary text-white px-3 py-1 rounded">Analysis</li>
-          <li class="bg-primary text-white px-3 py-1 rounded">Writing</li>
+          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Troubleshooting">Troubleshooting</li>
+          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="DetailOriented">Detail Oriented</li>
+          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Teamwork">Teamwork</li>
+          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Analysis">Analysis</li>
+          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Writing">Writing</li>
 
         </ul>
         <h3 class="text-xl font-semibold mb-2" data-i18n="Languages">Languages</h3>
         <div class="space-y-4 flex-col">
           <div>
-            <p class="font-semibold">Español (Nativo)</p>
+            <p class="font-semibold" data-i18n="Spanish">Spanish (Native)</p>
             <div class="flex space-x-1 mt-2">
               <span class="w-5 h-2 rounded bg-primary"></span>
               <span class="w-5 h-2 rounded bg-primary"></span>
@@ -163,18 +166,18 @@
             </div>
           </div>
           <div>
-            <p class="font-semibold">English (Advanced C1)</p>
+            <p class="font-semibold" data-i18n="English">English (Advanced C1)</p>
             <div class="flex space-x-1 mt-2">
               <span class="w-5 h-2 rounded bg-primary"></span>
               <span class="w-5 h-2 rounded bg-primary"></span>
               <span class="w-5 h-2 rounded bg-primary"></span>
               <span class="w-5 h-2 rounded bg-primary"></span>
-              <span class="w-5 h-2 rounded bg-gray-300 dark:bg-gray-700"></span>
+              <span class="w-5 h-2 rounded bg-gray-400 dark:bg-gray-700"></span>
             </div>
           </div>
         </div>
-        <h3 class="text-xl font-semibold">Driving License</h3>
-        <p>Categories: A2, B1</p>
+        <h3 class="text-xl font-semibold" data-i18n="DrivingLicense">Driving License</h3>
+        <p data-i18n="Categories">Categories: A2, B1</p>
       </div>
     </section>
 
@@ -187,14 +190,13 @@
       "
     >
       <div
-        class="container mx-auto px-6 max-w-3xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg"
+        class="container mx-auto px-6 max-w-3xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-8 rounded-lg shadow-lg text-gray-800 dark:text-gray-100 transition-colors"
       >
-        <h2 class="text-2xl font-bold mb-4 text-dark">Education</h2>
+        <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="Education">Education</h2>
         <div>
-          <h3 class="text-xl font-semibold">Software Engineer, B.S.</h3>
+          <h3 class="text-xl font-semibold" data-i18n="Profession">Software Engineer, B.S.</h3>
           <p>Tecnológico de Antioquia Institución Universitaria, Medellín</p>
-          <p class="text-sm text-gray-600">Graduated: 2024</p>
-        </div>
+          <p class="text-sm" data-i18n="Graduated">Graduated: 2024</p>  
       </div>
     </section>
 
@@ -207,67 +209,67 @@
       "
     >
       <div
-        class="container mx-auto px-6 max-w-4xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg"
+        class="container mx-auto px-6 max-w-4xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-8 rounded-lg shadow-lg text-gray-800 dark:text-gray-100 transition-colors"
       >
-        <h2 class="text-2xl font-bold mb-4 text-dark">Work Experience</h2>
+        <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="WorkExperience">Work Experience</h2>
         <!-- Repeat for each experience -->
         <div class="mb-6">
-          <h3 class="text-xl font-semibold">
+          <h3 class="text-xl font-semibold" data-i18n="Evertec">
             Bilingual Implementation Analyst
           </h3>
           <p class="italic">Evertec Inc, Medellín | Feb 2025 - Apr 2025</p>
           <ul class="list-disc list-inside mt-2 space-y-1">
-            <li>
+            <li data-i18n="Evertec1">
               Created 1 layout template with React and Tailwind to optimize
               sales and implementation processes.
             </li>
-            <li>Complied with SLAs.</li>
+            <li data-i18n="Evertec2">Complied with SLAs.</li>
           </ul>
         </div>
         <div class="mb-6">
-          <h3 class="text-xl font-semibold">
-            Practicante de Excelencia (Internship)
+          <h3 class="text-xl font-semibold" data-i18n="Gobernacion">
+            Internship at Gobernación de Antioquia
           </h3>
           <p class="italic">
             Gobernación de Antioquia, Medellín | Feb 2024 - Jun 2024
           </p>
           <ul class="list-disc list-inside mt-2 space-y-1">
-            <li>
+            <li data-i18n="Gobernacion1">
               Improved a platform made in Laravel (PHP) with PostgreSQL,
               cleaning and refactoring more than 30 files.
             </li>
-            <li>
+            <li data-i18n="Gobernacion2">
               Solved 6 security breaches within headers and server settings.
             </li>
-            <li>Documented 5 processes and additions in Markdown format.</li>
+            <li data-i18n="Gobernacion3">Documented 5 processes and additions in Markdown format.</li>
           </ul>
         </div>
         <div class="mb-6">
-          <h3 class="text-xl font-semibold">Bilingual Support Agent</h3>
+          <h3 class="text-xl font-semibold" data-i18n="Webhelp">Bilingual Support Agent</h3>
           <p class="italic">Webhelp, Medellín | Mar 2022 - Feb 2024</p>
           <ul class="list-disc list-inside mt-2 space-y-1">
-            <li>
+            <li data-i18n="Webhelp1">
               Provided customer support for technical, legal, and
               product-related inquiries with over 90% customer satisfaction
               ratio.
             </li>
-            <li>Presented 4 workshops for efficiency improvement.</li>
+            <li data-i18n="Webhelp2">Presented 4 workshops for efficiency improvement.</li>
           </ul>
         </div>
         <div>
-          <h3 class="text-xl font-semibold">Junior Developer</h3>
+          <h3 class="text-xl font-semibold" data-i18n="Areatic">Junior Developer</h3>
           <p class="italic">Areatic, Medellín | Jul 2019 - Dec 2021</p>
           <ul class="list-disc list-inside mt-2 space-y-1">
-            <li>
+            <li data-i18n="Areatic1">
               Implemented a computational vision library with C++ for automated
               license plate recognition with over 88% accuracy.
             </li>
-            <li>
+            <li data-i18n="Areatic2">
               Developed 2 TCP/IP sockets in C++ and Python for real-time license
               plate submission.
             </li>
-            <li>Implemented video streaming protocols as RTSP.</li>
-            <li>
+            <li data-i18n="Areatic3">Implemented video streaming protocols as RTSP.</li>
+            <li data-i18n="Areatic4">
               Created 2 web modules with Angular (JS) to audit the automated
               license plate recognition.
             </li>
@@ -295,22 +297,23 @@
         </h2>
         <p class="mb-2 flex justify-center items-center gap-2">
           <i class="ph ph-envelope text-primary"></i><span>Email:</span>
-          <a href="mailto:jacu.13c@gmail.com" class="text-primary"
+          <a href="mailto:jacu.13c@gmail.com" class="text-primary" data-i18n="Email"
             >jacu.13c@gmail.com</a
           >
         </p>
         <p class="mb-2 flex justify-center items-center gap-2">
-          <i class="ph ph-phone text-primary"></i><span>Phone:</span> +57
-          3203161289
+          <i class="ph ph-phone text-primary"></i><span data-i18n="Phone">Phone: +57
+          3203161289</span>
         </p>
         <p class="mb-4 flex justify-center items-center gap-2">
           <i class="ph ph-map-pin text-primary"></i
-          ><span>Location:</span> Medellín, Colombia
+          ><span data-i18n="Location">Location: Medellín, Colombia</span> 
         </p>
         <a
           href="https://wa.me/573203161289"
           target="_blank"
           class="inline-block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+          data-i18n="WhatsApp"
           >Contact via WhatsApp</a
         >
       </div>
@@ -327,10 +330,18 @@
           });
         });
 
-        // Dark Mode Toggle
+        // Dark Mode Toggle with persistence
         const themeToggle = document.getElementById("themeToggle");
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+
         themeToggle.addEventListener("click", () => {
-          document.documentElement.classList.toggle("dark");
+          const isDark = document.documentElement.classList.toggle("dark");
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
 
         // Language Toggle
@@ -343,6 +354,39 @@
             Contact: "Contact",
             Languages: "Languages",
             Role: "Software Developer Specializing in Data Analytics",
+            Linkedin: "LinkedIn Profile",
+            Description: "Software developer specializing in data analytics, skilled in teamwork and customer relations. Proficient in multiple programming languages and technologies, with a focus on delivering efficient and secure solutions.",
+            Skills: "Skills",
+            Troubleshooting: "Troubleshooting",
+            DetailOriented: "Detail Oriented",
+            Teamwork: "Teamwork",
+            Analysis: "Analysis",
+            Writing: "Writing",
+            Spanish: "Spanish (Native)",
+            English: "English (Advanced C1)",
+            DrivingLicense: "Driving License",
+            Categories: "Categories: A2, B1",
+            Profession: "Software Engineer, B.S.",
+            Graduated: "Graduated: 2024",
+            WorkExperience: "Work Experience",
+            Evertec: "Bilingual Implementation Analyst",
+            Evertec1: "Created 1 layout template with React and Tailwind to optimize sales and implementation processes.",
+            Evertec2: "Complied with SLAs.",
+            Gobernacion: "Internship at Gobernación de Antioquia",
+            Gobernacion1: "Improved a platform made in Laravel (PHP) with PostgreSQL, cleaning and refactoring more than 30 files.",
+            Gobernacion2: "Solved 6 security breaches within headers and server settings.",
+            Gobernacion3: "Documented 5 processes and additions in Markdown format.",
+            Webhelp: "Bilingual Customer Service Agent",
+            Webhelp1: "Provided customer support for technical, legal, and product-related inquiries with over 90% customer satisfaction ratio.",
+            Webhelp2: "Presented 4 workshops for efficiency improvement.",
+            Areatic: "Junior Web Developer",
+            Areatic1: "Implemented a computational vision library with C++ for automated license plate recognition with over 88% accuracy.",
+            Areatic2: "Developed 2 TCP/IP sockets in C++ and Python for real-time license plate submission.",
+            Areatic3: "Implemented video streaming protocols as RTSP.",
+            Areatic4: "Created 2 web modules with Angular (JS) to audit the automated license plate recognition.",
+            Phone:" Phone: +57 3203161289",
+            Location: "Location: Medellín, Colombia",
+            WhatsApp: "Contact via WhatsApp"
           },
           es: {
             Home: "Inicio",
@@ -351,8 +395,41 @@
             Experience: "Experiencia",
             Contact: "Contacto",
             Languages: "Idiomas",
-            Role: "Desarrollador de Software especializado en Analítica de Datos",
-          },
+            Role: "Desarrollador de Software en especialización en Análisis de Datos",
+            Linkedin: "Perfil de LinkedIn",
+            Description: "Desarrollador de software en especialización en análisis de datos, hábil en trabajo en equipo y relaciones con clientes. Competente en múltiples lenguajes de programación y tecnologías, con enfoque en entregar soluciones eficientes y seguras.",
+            Skills: "Habilidades",
+            Troubleshooting: "Resolución de Problemas",
+            DetailOriented: "Orientado al Detalle",
+            Teamwork: "Trabajo en Equipo",
+            Analysis: "Análisis",
+            Writing: "Redacción",
+            Spanish: "Español (Nativo)",
+            English: "Inglés (Avanzado C1)",
+            DrivingLicense: "Licencia de Conducción",
+            Categories: "Categorías: A2, B1",
+            Profession: "Ingeniero de Software",
+            Graduated: "Graduado: 2024",
+            WorkExperience: "Experiencia Laboral",
+            Evertec: "Analista de Implementación Bilingüe",
+            Evertec1: "Creé 1 plantilla de diseño con React y Tailwind para optimizar procesos de ventas e implementación.",
+            Evertec2: "Cumplí a cabalidad con las métricas estipuladas.",
+            Gobernacion: "Practicante de Excelencia en Gobernación de Antioquia",
+            Gobernacion1: "Mejoré una plataforma hecha en Laravel (PHP) con PostgreSQL, limpiando y refactorizando más de 30 archivos.",
+            Gobernacion2: "Resolví 6 brechas de seguridad en encabezados y configuraciones del servidor.",
+            Gobernacion3: "Documenté 5 procesos y adiciones en formato Markdown.",
+            Webhelp: "Agente de Soporte Bilingüe",
+            Webhelp1: "Brindé soporte al cliente para consultas técnicas, legales y relacionadas con productos con más del 90% de satisfacción del cliente.",
+            Webhelp2: "Presenté 4 talleres para mejora de eficiencia.",
+            Areatic: "Desarrollador Junior",
+            Areatic1: "Implementé una librería de visión computacional con C++ para reconocimiento automatizado de placas con más del 88% de precisión.",
+            Areatic2: "Desarrollé 2 sockets TCP/IP en C++ y Python para envío de placas en tiempo real.",
+            Areatic3: "Implementé protocolos de transmisión de video como RTSP.",
+            Areatic4: "Creé 2 módulos web con Angular (JS) para auditar el reconocimiento automatizado de placas.",
+            Phone: "Teléfono: +57 3203161289",
+            Location: "Ubicación: Medellín, Colombia",
+            WhatsApp: "Contactar por WhatsApp"
+          }
         };
         let currentLang = "en";
         const langToggle = document.getElementById("langToggle");
