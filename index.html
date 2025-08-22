@@ -1,487 +1,591 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="John Alejandro Correa Usuga - Software Developer specializing in Data Analytics, with experience in C++, Python, JavaScript and SQL." />
-    <meta name="keywords" content="Software Developer, Data Analytics, Full Stack Developer, C++, Python, JavaScript, SQL, Medellín, Docker, Data Entry" />
-    <meta name="author" content="John Alejandro Correa Usuga" />
-    <meta property="og:title" content="John Alejandro Correa Usuga - Software Developer Portfolio" />
-    <meta property="og:description" content="Software Developer specializing in Data Analytics, with experience in C++, Python, JavaScript and SQL." />
-    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4E03AQHeMtBaDRwDFQ/profile-displayphoto-shrink_800_800/B4EZWwbjLWG0Ac-/0/1742421767235?e=1757548800&v=beta&t=vGUkuGHTfxG1S5QRsDlPKvuFsyZ9PDkU5fHerSRIJmQ" />
-    <meta property="og:url" content="https://jacu1311.github.io/" />
-    <link rel="canonical" href="https://jacu1311.github.io/" />
-    <link rel="preload" as="image" href="https://media.licdn.com/dms/image/v2/D4E03AQHeMtBaDRwDFQ/profile-displayphoto-shrink_800_800/B4EZWwbjLWG0Ac-/0/1742421767235?e=1757548800&v=beta&t=vGUkuGHTfxG1S5QRsDlPKvuFsyZ9PDkU5fHerSRIJmQ" />
-    <link rel="preload" as="script" href="https://unpkg.com/@phosphor-icons/web" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#3498db",
-              dark: "#2c3e50",
-              light: "#ecf0f1",
-            },
-            animation: {
-              pulseSlow: "pulse 4s ease-in-out infinite",
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="John Alejandro Correa Usuga - Software Developer specializing in Data Analytics, with experience in C++, Python, JavaScript and SQL." />
+  <meta name="keywords"
+    content="Software Developer, Data Analytics, Full Stack Developer, C++, Python, JavaScript, SQL, Medellín, Docker, Data Entry" />
+  <meta name="author" content="John Alejandro Correa Usuga" />
+  <meta property="og:title" content="John Alejandro Correa Usuga - Software Developer Portfolio" />
+  <meta property="og:description"
+    content="Software Developer specializing in Data Analytics, with experience in C++, Python, JavaScript and SQL." />
+  <meta property="og:image"
+    content="https://media.licdn.com/dms/image/v2/D4E03AQHeMtBaDRwDFQ/profile-displayphoto-shrink_800_800/B4EZWwbjLWG0Ac-/0/1742421767235?e=1757548800&v=beta&t=vGUkuGHTfxG1S5QRsDlPKvuFsyZ9PDkU5fHerSRIJmQ" />
+  <meta property="og:url" content="https://jacu1311.github.io/" />
+  <link rel="canonical" href="https://jacu1311.github.io/" />
+  <link rel="preload" as="image"
+    href="https://media.licdn.com/dms/image/v2/D4E03AQHeMtBaDRwDFQ/profile-displayphoto-shrink_800_800/B4EZWwbjLWG0Ac-/0/1742421767235?e=1757548800&v=beta&t=vGUkuGHTfxG1S5QRsDlPKvuFsyZ9PDkU5fHerSRIJmQ" />
+  <link rel="preload" as="script" href="https://unpkg.com/@phosphor-icons/web" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3498db",
+            dark: "#2c3e50",
+            light: "#ecf0f1",
+          },
+          animation: {
+            pulseSlow: "pulse 4s ease-in-out infinite",
           },
         },
-      };
-    </script>
-  </head>
-  <body
-    class="bg-light text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors"
-    role="document"
-  >
-    <!-- Language + Theme Toggle -->
-    <div class="fixed top-4 right-4 flex gap-4 z-50">
-      <button
-        id="themeToggle"
-        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
-        aria-label="Toggle theme"
-      >
-        <i class="ph ph-sun dark:ph-moon text-xl"></i>
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-light text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors" role="document">
+  <!-- Language + Theme Toggle -->
+  <div class="fixed top-4 right-4 flex gap-4 z-50">
+    <button id="themeToggle"
+      class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
+      aria-label="Toggle theme">
+      <i class="ph ph-sun dark:ph-moon text-xl"></i>
+    </button>
+    <button id="langToggle"
+      class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
+      aria-label="Toggle language">
+      <i class="ph ph-translate text-xl"></i>
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-dark text-white z-40 shadow-md dark:bg-gray-800 transition-colors h-14">
+    <nav class="container mx-auto h-full px-4 relative flex items-center justify-center">
+      <button id="menuToggle" class="md:hidden absolute left-4 text-white" aria-label="Toggle menu">
+        <i class="ph ph-list text-xl"></i>
       </button>
-      <button
-        id="langToggle"
-        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
-        aria-label="Toggle language"
-      >
-        <i class="ph ph-translate text-xl"></i>
-      </button>
+
+      <!-- Navigation links -->
+      <ul class="hidden md:flex flex-wrap justify-center gap-4 font-semibold text-sm md:text-base" id="navMenu">
+        <li>
+          <a href="#home" class="hover:text-primary" data-i18n="Home">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="hover:text-primary" data-i18n="About">About</a>
+        </li>
+        <li>
+          <a href="#education" class="hover:text-primary" data-i18n="Education">Education</a>
+        </li>
+        <li>
+          <a href="#experience" class="hover:text-primary" data-i18n="Experience">Experience</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-primary" data-i18n="Contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home"
+    class="min-h-screen flex flex-col justify-center items-center text-center p-4 md:px-6 pt-24 bg-cover bg-center bg-no-repeat bg-fixed">
+    <div
+      class="bg-white bg-opacity-80 dark:bg-gray-800 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 max-w-4xl w-full mx-auto">
+      <div class="relative w-24 h-24 md:w-36 md:h-36">
+        <div class="absolute inset-0 rounded-full animate-pulseSlow border-4 border-primary opacity-50"></div>
+        <img
+          src="https://media.licdn.com/dms/image/v2/D4E03AQHeMtBaDRwDFQ/profile-displayphoto-shrink_800_800/B4EZWwbjLWG0Ac-/0/1742421767235?e=1757548800&v=beta&t=vGUkuGHTfxG1S5QRsDlPKvuFsyZ9PDkU5fHerSRIJmQ"
+          alt="John Alejandro Correa Usuga - Profile Picture" loading="lazy"
+          class="w-24 h-24 md:w-36 md:h-36 rounded-full border-4 border-primary object-cover relative z-10" />
+      </div>
+      <div class="flex-1">
+        <h1 class="text-2xl md:text-3xl font-bold">John Alejandro Correa Usuga</h1>
+        <p class="text-lg mt-2" data-i18n="Role">
+          Software Developer Specializing in Data Analytics
+        </p>
+        <a href="https://www.linkedin.com/in/jacu-c13" target="_blank"
+          class="inline-block mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-blue-700"
+          data-i18n="Linkedin">LinkedIn Profile</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Header -->
-    <header class="fixed top-0 w-full bg-dark text-white z-40 shadow-md dark:bg-gray-800 transition-colors h-14">
-      <nav class="container mx-auto h-full px-4 relative flex items-center justify-center">
-        <!-- Mobile menu button -->
-        <button 
-          id="menuToggle"
-          class="md:hidden absolute left-4 text-white"
-          aria-label="Toggle menu"
-        >
-          <i class="ph ph-list text-xl"></i>
-        </button>
-        
-        <!-- Navigation links -->
-        <ul class="hidden md:flex flex-wrap justify-center gap-4 font-semibold text-sm md:text-base" id="navMenu">
-          <li>
-            <a href="#home" class="hover:text-primary" data-i18n="Home">Home</a>
-          </li>
-          <li>
-            <a href="#about" class="hover:text-primary" data-i18n="About"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#education"
-              class="hover:text-primary"
-              data-i18n="Education"
-              >Education</a
-            >
-          </li>
-          <li>
-            <a
-              href="#experience"
-              class="hover:text-primary"
-              data-i18n="Experience"
-              >Experience</a
-            >
-          </li>
-          <li>
-            <a href="#contact" class="hover:text-primary" data-i18n="Contact"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <!-- Projects Section -->
+  <section id="projects" class="py-12 md:py-20 bg-cover bg-center bg-no-repeat bg-fixed px-4">
+    <div
+      class="container mx-auto max-w-4xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-8 text-dark dark:text-white transition-colors" data-i18n="Projects">Projects</h2>
 
-    <!-- Home Section -->
-    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center p-4 md:px-6 pt-24 bg-cover bg-center bg-no-repeat bg-fixed">
-      <div class="bg-white bg-opacity-80 dark:bg-gray-800 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 max-w-4xl w-full mx-auto">
-        <div class="relative w-24 h-24 md:w-36 md:h-36">
-          <div
-            class="absolute inset-0 rounded-full animate-pulseSlow border-4 border-primary opacity-50"
-          ></div>
-          <img
-            src="https://media.licdn.com/dms/image/v2/D4E03AQHeMtBaDRwDFQ/profile-displayphoto-shrink_800_800/B4EZWwbjLWG0Ac-/0/1742421767235?e=1757548800&v=beta&t=vGUkuGHTfxG1S5QRsDlPKvuFsyZ9PDkU5fHerSRIJmQ"
-            alt="John Alejandro Correa Usuga - Profile Picture"
-            loading="lazy"
-            class="w-24 h-24 md:w-36 md:h-36 rounded-full border-4 border-primary object-cover relative z-10"
-          />
-        </div>
-        <div class="flex-1">
-          <h1 class="text-2xl md:text-3xl font-bold">John Alejandro Correa Usuga</h1>
-          <p class="text-lg mt-2" data-i18n="Role">
-            Software Developer Specializing in Data Analytics
-          </p>
-          <a
-            href="https://www.linkedin.com/in/jacu-c13"
-            target="_blank"
-            class="inline-block mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-blue-700"
-            data-i18n="Linkedin"
-            >LinkedIn Profile</a
-          >
+      <!-- Carousel Container -->
+      <div class="relative">
+        <!-- Slides -->
+        <div class="overflow-hidden relative">
+          <div class="flex transition-transform duration-500 ease-out" id="slides-container">
+
+            <!-- Project 1 -->
+            <div class="w-full flex-shrink-0">
+              <div class="bg-white w-full flex items-center justify-center">
+                <img src="https://lh3.googleusercontent.com/fife/ALs6j_FHwdAbnKld6zXXk4xO-RAEd1vTiv_uXwp9BcSmd1DX_3GDOso0EMtIjxzDpj8J2gV6047sHokKbwB4co-ZVNC0wtJ3YlzHSE_a6n72FW337Firf4Vff2EbRL2BGUZPwFtW9bl_0cBLyuiMTtpWaaWYgVNirHa1ud8kU-xWt2ETpEE9sijm40ZfO8SRBXaycHoaRqB3lftufay7_NE02cYvNt6gMKGt2a8i1rjK5aGKjGgtG38ZP_YiKB1mHbMTFmSKUyGh02zKgoO2IHm1bmdDzbmt70vsHCXsEqkTTRrY1RCiynMwdofxnVKOyDmgskj6HRJ1pIp0nxDyaOGcgXpVPk6uaTM7m6a88zMfmn6aNUb4wTq1rd5KHl7F21ETM93ptnXzz07Fv23AvviQznBG_CZlC661Cwcg764l56G1RmuLEwHVCYbw3pifNSGbnhlAEplXFQAcjNEzZG33aaYs3GcMDZqLoxXemWGKVKCKgT17K52zohXPMLAHniNQzV_OaIni3oO6uNFa4pLAYS2CBprtYOcYyXhPKFfSDzAcKEhhNTS3N17n38ZHeUxqB9VomrZjuq2WPjesj8hLFkxOkq15bkvMnqtMD6FS6kwNAsny7pS1JgYQ2WMCrK4r6Ubed0x2_noi_Bo6S6aw0ViHXy1XErgFeApS7Us7LftJQim9GGZn457JOgvupX_V8bjlPak1RvJEVO9_rThqybC-hh2dB52aF-pk8qkBFIHpt3jiuwhLSQX-qC26RojxXATLkeR_999x0bnP6pBetGrUDVo7zuzALL746Nu19xHSkMnuXAbEmC3ygEyojbXSLtobxVMk3BzhT0mpEXCIHwwR0G125Za1hiMfYs2crNyxTR6r1szG3UYdVKxxoDxzIF5_4fSVNaN87QLBfKOCctg0Kv7L5Rqn0NEL_XOa5Ihd0UfkbbYq9hHk0MFCXhpFFFEEnJhzQISq4SC-wNDbM9szZuaxwmssNv6UZl0osrOaG2_DH6-pIR7x_AkKxZHUwgW8V8B563mi5zF0abTKk3OARh8gV92_LV7Gz4KH8639UAnM7sT3AxLFRrm4pJRJIT2tnv7Fqu84WHvkuQh1qNfZgHdsqgDxcqqLmppE_6lqM7OxRPTmtzYfIpkqCBF57BVKbpHHujGoKqiJF_e0iKLXxfusUJkrd3RC5IX3aePT5-e97rWf2hNniLHz7g1KSx0pTQetbHkHuuLZKsRvof-q-Mg7X_14YQcrt_yjcJsI3mYXcK5t7nOMtbeXOLlyHsED_cAvqeJQik_sHi2xL-jLbXKnTCUzAg-Br1NsXuu8ZKSOdCfAvhxX7pO5Zk5iXtVQG5WEC5Gs45shSJVb1mTsggNfen4je5X9aEyJweMRf0Af0MzoqPAsoJGjJejN_bCB4XKfJCQeofVdIYu_HvGvpxnYvmXmU47E2VELt7VD12f0zh-yiRrZJT8JJ7HOADmmcQQ71tpPtOg4hsISX72HiYzUfBcwzrJ4du2UMp3xzRX8xVQEtofa29K3GbJjbp3rbv3v9KZ-Cg3O07bIlGCaC2LUZL5rcI9r0S_wJGhYQYxf-K7Z4EWTRkoUdIqTEl8dXu9ziaRECHxQTfHP0ff4edvMYsz5YG27X6kBogRC2oXfBj1cG4K7jAAH6zcbMEYlaW4V=w508-h900?auditContext=prefetch" alt="Project 1" class=" h-48 rounded-lg mb-4">
+              </div>
+              <h3 class="text-xl font-semibold mb-2" data-i18n="LicensePlateRecognition">License Plate Recognition System</h3>
+              <p class="text-gray-700 dark:text-gray-300" data-i18n="LicensePlateRecognitionDesc">Computer vision application developed in C++ using OpenCV.
+                Achieves 88% accuracy in automated license plate detection and recognition. Includes real-time
+                processing and TCP/IP socket implementation.</p>
+              <a class="text-gray-400 dark:text-gray-600" href="https://www.facebook.com/cparking.com.co/" target="_blank" data-i18n="ProjectLink">Click for more info.</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="w-full flex-shrink-0">
+              <div class="bg-white w-full flex items-center justify-center">
+                <img src="https://lh3.googleusercontent.com/fife/ALs6j_HFjxU8_AH5fVHXxkD8i_XuG5F4mWhtwO6U_xeiVStrBkNeV9mEvawyd6UMGdt2XBFaBsLRtapTQUdM5kIGVny8StbNOJ74Evwupp0uKh0k61E_I_0NbNVv6ooI5Vy8504cAvsuQS_XOr84Vv7E7W5hHXP5jDeSWd9fHFri3FSRX2bAvxxL7fVYIjxH6yNxSyGo1yK5MZw7drK-alYJnfHXOs5JB4pf-6rSsKK56n7BaxdTVFNZVIikYFEVSBwQH-OWYgVrxt3iiqqPcDnzWQOwVH2XfIwtW9-YpQF_PxHlRmg21APYTmjyU_1HVq0hoB_hiD695TF5wCbzU2q6cMMQa3nu0dCEVCwbNY7w9TDjlSbmOOQX1R6GRerU6mNjanUPRWPDL1nun1tnfrl-jt-Hpu2OBSz1YXcTcZGpz5qEryCuEXP0Fnv-5u7Fhynld-dG-QLExWNCGku1OMzOk4I3ZRicYKqFFiVpGU0fetJqgneNoGQM-QCRZNvm5f7QfDIQV4QHpGDEaJ2rWoXqst0Oceg0rYVNY1I9_TnaSG6TpfBgT9iFrRqFi_oSi9CnTmXHTIM8BINHkZ6emIo0qVyXdkzNWDUIYb2oZpUkJv-ifm30epykIhX4TS2_2deCgGMtEHbJDc6_mFblCLzB_q6KHG42M9N-ovLQ8uzPSPLP7oRKJszj83-UGagD4sMDPRS26XRU_uGCOArQhwOpWA6LCpnwPjo14sM0kdxRI7MdkQKGhi0ImpYTFiBubRjA6UAefhcegVruywl8T4kSz6tSWsozGGCYobTdGAYC03Txq-NM4TysH0Gyyw-x1Rpf_vCI0B-yHRpA-XCOT42ONLxwtGSwekWM8Ahghfz2BToMaa1dA1iPxqngGyQpBuuGFNzJrLeSZS5HmNlhCPJyWb51vEFd-ToKu_d302KXslqA9xlHbXbbNcl2XWr2BMPnPiEQK_MzukdxNup_4xpexRRItsXo5ON6J6QaB0e9CNTdFzj2nXfJGQJcWY9YD9-p37HQHIdIlSkemUq0jo5E0iTFy9nChlBG8RBYZa7-TiQF0ffhfJOkNuK_eRyBOuA21atNPQMnwruTd1TLuhNYF--XM39OrVjwa4naZSVtC7kQhokRuEILmrnkA7y8NA5ZpdIhem1pn-Hmbo9dL-eL-QeOuFNbpYk5EV363wAFNQfE8xosVlpbwBLidDzKiX2b_t0jiU_HqDIQeO_SPSXFdHKh0K6E_Veyz8LkqcCvrhlrKTkkXWg0I7Ed_MW90CrLxdfwCfGL3Vh8RTO58IGZWKxnuW977IY6Bl0_f2F1MVS72trSNDOilqg4Wrsb8FSDBDdpTdUHLtWYnJizsFAqwbUV48qTYnFuLQk2lT9SUimBrTRhfA8A4g6FbXlw2iwv_w0LJwK2LUCNFyTbZ1pTrjAyBdmqH85PZNfbhDI4lKnmsXaeUMkgo3UCYolmm4ZXd1-hHEvzySdtrREkT_WWpgblsmsD78jhn241zIAvHCcmiMcGcVpx8jRO0Ex0F3A-WiZC9pXm0DERGlH5vnGK-_4LNrItAgFuWC5S4GKsTptL4czYAEtKdDCE1ZAM8cAxyv08NKDm4pgY8fmuVAyLOMMHgFWKk3r6OiQYa6DeR-ltokRxNaFTh5awG-FwikbK5X1Bac4P=w508-h900?auditContext=prefetch" alt="Project 2" class="w-full h-48 object-cover rounded-lg mb-4">
+              </div>
+              <h3 class="text-xl font-semibold mb-2" data-i18n="FullStackRepository">Full-Stack Web Repository</h3>
+              <p class="text-gray-700 dark:text-gray-300" data-i18n="FullStackRepositoryDesc">I was part of the team that deployed a web repository called Siseduca to provide visibility and data analysis on the status of educational institutions in Antioquia.</p>
+              <a class="text-gray-400 dark:text-gray-600" href="https://siseduca.antioquia.gov.co/" target="_blank" data-i18n="ProjectLink">Click for more info.</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="w-full flex-shrink-0">
+              <div class="bg-white w-full flex items-center justify-center">
+                <img src="https://lh3.googleusercontent.com/fife/ALs6j_GTTrb9j1gPNzQF9eHKKBXv7Mq_Z8rKW2kKTZD1m6zbfifuoApmlTmYcmFMbaOTNNkB8tCJ1RIXqDwG8_Mnx_1Qi3Nan0zestSnghqfE6dDZSj7u7vCJwaiGhH4L0GB61BTaY8KtH5Wb_egcOuuuuA9EdjjBfyQo7TuVVnoEzYwF7jFKPrGHLhZWqRppOkamoynatRkxQ8LB6bTyU-ZqyrIBz8oMo3idEaZPUnR1wr583t4_1RDR2NNBkPry8F4fCzu-Qbv-10DqGVr7y9hMmKuAer0WuYsrEaOZO-7M-QcVveNN_Qwh2JNMxgUPeWbPNwBcmx_YYcHrJ4LL6lNTLRVhNKdzU6jruweMvJredvBij80ooQ7LH-qeMnRkKHmgNL87La1vd1B84WsgvBIq0JBhbUuDey64V9u56G-cjWBP6nXkqY7PfzWK7YCN2vu1Wr7uwtYujFTYm2zLu0u6-CGuX9BUHgMVlv0FZSrIU5cDYz1M10_JJ29onBGYk5nVf_bmPNPlLHB3qDGqnWcCerV3JP9WshSrdlTpx5I6N1f-HSmGCWwq9HlHF5yKC3y-Cur6g1pHibJMfAn4ldPahPKdW_FX-WVXAXeiYPE49MYfFThTjy898rNpnEoKKdpLSOl8LLyYesEMntrwC-cB_impnwOd6C9sbrz398Kw8ErfS34s4gHo2_AOIAQVXfHpmKN3zGwzwmSjl-IUKSN5DOqBGBQPKdaQmUFiMOdU_tYQxuBSQKbK5j50dzdkrKx3hy1Fxxa6q0MFL26BnY60vUkyxUjSJESLeF8BACShbf1iTjVsCJY8Ot69o2188GbHT9htmtycwuTCOvu7zaToKxJaqbW62QL6TX3JqfcScwF92DgAIQwz4POLzgqmmuz2UMb7-OkmkvEl7AFStOBqbQ1609o4yeXa_03Es8P7WULeSZUTG4kPhMfKJzYxNILJJDZ4MlD2pKVCvosFjj19ssLKO1IG-pz_mz0O3f1003GsFel9XhZNVRtaj_3nn_u4yhO4Dszc9D3IPhT3gWo71KWFiSxadRmj_fCR7qxDeCXjepFd0rvZhnj5BgKY9b6DzFMKh5ny6b-N-8TViPWfZwI2DLfBJ0F-Kw9qubK3tmlSrrhEZC_ZVlc8P3m5txVZXxqHvY_Kt9BwccHMqY2RWMQ_sWtBqh_MrLII7rRYCaA1BKeseTMxs_o66G99L-t6nEu4x_0DoHNQNDe_Nd1JAjHARnueifqjggSCRnHzFOtorc5q33x80y9YaCzHmMKBDN2HtWziKxS08h49r2W_xL7mSpDWWZMDQ4YpS9H9e2yJHbFYr7_cw2ZIEeGibbA3NNx71idhHHRmQekk8CmHBpqb6EUriJAz6nimyqtri8rx09GTGWHEqQ9ciniVHRVS1S5ndwbtGqCpbeUvPkT30LeJ52guyzIHJxnwEQgDYlWb09-xl7mn48qbXP181kHgsS7t4nQAP3to-EHT7ZYOPzhfbL22lAOok-QXI4ek-ZqDHlB3vL57k98Q95JjTJ0O_aGcizOkewdtC3ecRf57ik_epUGRgZPKpprDBxlXa6h0pankkOZ4m1QzQCFK007ISHt7Vq897Hj4dgS0qWxGObmF7g7r-x2en5jZUGFPUNaBzhU755_jPTW3jDSwPu0F9sLeh8=w508-h900?auditContext=prefetch" alt="Project 3" class="w-full h-48 object-cover rounded-lg mb-4">
+              </div>
+              <h3 class="text-xl font-semibold mb-2" data-i18n="WebPortfolio">Web Portfolio</h3>
+              <p class="text-gray-700 dark:text-gray-300" data-i18n="WebPortfolioDesc">Extremely light-weighted portfolio made with JavaScript, HTML5 and Tailwind CSS V2.0 to showcase my professional and personal projects.</p>
+              <a class="text-gray-400 dark:text-gray-600" href="https://github.com/Jacu1311/jacu1311.github.io" target="_blank" data-i18n="ProjectLink">Click for more info.</a>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="w-full flex-shrink-0">
+              <div class="bg-white w-full flex items-center justify-center">
+                <img src="https://lh3.googleusercontent.com/fife/ALs6j_Fvuiw7QiYg4TQTWWpnRAkusvGY_HMJRVqrdO43LEwqBBxWAzFYXPMbAVRYodXIlN1sv9k9sUSz4Env_qF2n6JjBdUeI97h_vUWpneGw2THAfALXeGZkTLQ55hM30oJfnrjG9a4togiwrICvb7raFf8sna23217yIyXfirfI7BxFztS-XvA-3dE43yRT4s8liSOTPGK7FIGhplNsMk0T6aX0MJUQN4w58SG-9QmCtEnYWIBRHH_A8MrprpVIlcos0i-QEwnO-O2OepiJaFYSvY3CW4mkdDETAKMOAL6AjtWASV3fpnS5UcpkiLcGk13rYxzMfaHGynOHGAFRALgefxPATsbl0fNktdyJLHMnCeR46JTwoQvQlWZ-quRvWuQNTsMg1sStlbKRWO6s4KDeazqlss9tU-QmPWk_bKyIy8axMYNis_RhdryXA_D3WKT4lXnh9giYzKuFNM_s-XdPN7-rbLnQ8NJAMcuDOQY0XOMEXbagOdbRKFvYfGwZonPF4Quh6zkBnuNbakAJvg1VJ3AI92qSGA3PnepST8IO4BJLMlHJns0N4ku0qDLIoO1ODwHzWesFfVcc-jabjxMaaOMnJhuLNN_nl2JWGjTvC9GiV3arxMFxxhHpr9DXnZn1-wDjwGVajvkYuZzuqB2i0r1TrSTgKaPbCC8JiwJQqRTRwpQRJlWh7q_vbexOho4dKxjr9mwItPoOETCPjuB5rNWt6GwmtCzcSwytX6AoVw7aEJt0mXYBRAUeTwxdfBGrHnZSRY7NtJ1OBLnzVPtN4mwRXtCoUlLpfbTuiZ5ZwxaijJrHN-TpfJ1QpBE8r0l5QboZZWcW6y2mZ3ugzcZPDCS-SX9VyvN4HCFECO65j_pvlsycGBU8z4iCFwBBjkBptwQnkoGGcLCCXGwpWv3yikMcfhrWMmet3yxduQ3r__3PQ-_HfOAp6H7YXpqxAlQwhnL0o2x4AsI6VKTQlkGGJBL5bG1JqEXK7Clg4Vc59u6ei1xbdzQdxduNXK12KyQCzriq2zO5FFOxPgIB6PCdClmg7qklC_d9kGrS7nlgcn55inIyGay864jAdLtInhT1K0taWfhbzCReOIAgjbN6PWHNbJpE7MM5z-r4JeFUK9_l5MqFmBpMTydkn-daTkB8MY4U_iE9Iyu9PN5GsyUMPOfkxaZekXvUsBxS8gyiXE57xliQnsf-jaxtNgcpq7bu2YT0H08v7MQamSXfx7Pw8XS2t3GtPRpGtk2tVC9pLNRKBBNxAEdYxgP_oFy44aFHdgDVQwmFRYZjeuteKFbLTUQbR3WlFCuY9MKHCqRJMAwWJ7YvLeZMv8AfRDUmdcATuYVo5SWutmuoRD9YA-gdntjAup5zIaTqio2iRAQTfRhNfpwGWxSvRyRR1-HkRVekeus2cD89DUCih8Iz6GZIDIom-iS_Z0KBiORZY-AQ5LPCN9HTGK8l_0KTppvMOCEo05KHVmqB2yQuAKrwqkdtE1s0BIGAsEOXKR5uU7QvRhe_Z4TUsi1TzZqaOwAv2is0RxUgIqDOs2yGPMXn9zeicq_ABGkVcKvA4ilkZOueejAM1AmNOE2HWGCnM-81bpEghyhPdMgjczz0tsy6oILylJwnFqDlSCsJVwGW65-Y74iIKun3x5GhxVsqfjYTtT1tIc2s7Y=w508-h900?auditContext=prefetch" alt="Project 4" class="w-full h-48 object-cover rounded-lg mb-4">
+              </div>
+              <h3 class="text-xl font-semibold mb-2" data-i18n="SheetMacroExtension">Sheet Macro Extension</h3>
+              <p class="text-gray-700 dark:text-gray-300" data-i18n="SheetMacroExtensionDesc">Local hosted macro extension made to improve efficiency while working on a web browser, without compromising sensitive information. This extension works by providing it a google drive's URL to a Google Sheets file.</p>
+              <a class="text-gray-400 dark:text-gray-600" href="https://github.com/Jacu1311/Sheet-Macro-Extension" target="_blank" data-i18n="ProjectLink">Click for more info.</a>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-dark/50 hover:bg-dark/75 text-white p-2 rounded-r"
+            id="prevBtn" aria-label="Previous slide">
+            <i class="ph ph-caret-left text-xl"></i>
+          </button>
+          <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-dark/50 hover:bg-dark/75 text-white p-2 rounded-l"
+            id="nextBtn" aria-label="Next slide">
+            <i class="ph ph-caret-right text-xl"></i>
+          </button>
+
+          <!-- Dots -->
+          <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+            <button class="w-2 h-2 rounded-full bg-dark/50 active" data-index="0" aria-label="Go to slide 1"></button>
+            <button class="w-2 h-2 rounded-full bg-dark/50" data-index="1" aria-label="Go to slide 2"></button>
+            <button class="w-2 h-2 rounded-full bg-dark/50" data-index="2" aria-label="Go to slide 3"></button>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section
-      id="about"
-      class="py-12 md:py-20 bg-cover bg-center bg-no-repeat bg-fixed px-4"
-    >
-      <div
-        class="container mx-auto max-w-4xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg"
-      >
-        <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="About">About Me</h2>
-        <p class="mb-6" data-i18n="Description">
-          Software developer specializing in data analytics, skilled in teamwork
-          and customer relations. Proficient in multiple programming languages
-          and technologies, with a focus on delivering efficient and secure
-          solutions.
+  <!-- About Section -->
+  <section id="about" class="py-12 md:py-20 bg-cover bg-center bg-no-repeat bg-fixed px-4">
+    <div
+      class="container mx-auto max-w-4xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="About">About Me</h2>
+      <p class="mb-6" data-i18n="Description">
+        Software developer specializing in data analytics, skilled in teamwork
+        and customer relations. Proficient in multiple programming languages
+        and technologies, with a focus on delivering efficient and secure
+        solutions.
+      </p>
+      <h3 class="text-xl font-semibold mb-2" data-i18n="Skills">Skills</h3>
+      <ul class="flex flex-wrap gap-2 mb-6">
+        <li class="bg-primary text-white px-3 py-1 rounded">C++</li>
+        <li class="bg-primary text-white px-3 py-1 rounded">Python</li>
+        <li class="bg-primary text-white px-3 py-1 rounded">Javascript</li>
+        <li class="bg-primary text-white px-3 py-1 rounded">SQL</li>
+        <li class="bg-primary text-white px-3 py-1 rounded">Git</li>
+        <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Troubleshooting">Troubleshooting</li>
+        <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="DetailOriented">Detail Oriented</li>
+        <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Teamwork">Teamwork</li>
+        <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Analysis">Analysis</li>
+        <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Writing">Writing</li>
+
+      </ul>
+      <h3 class="text-xl font-semibold mb-2" data-i18n="Languages">Languages</h3>
+      <div class="space-y-4 flex-col">
+        <div>
+          <p class="font-semibold" data-i18n="Spanish">Spanish (Native)</p>
+          <div class="flex space-x-1 mt-2">
+            <span class="w-5 h-2 rounded bg-primary"></span>
+            <span class="w-5 h-2 rounded bg-primary"></span>
+            <span class="w-5 h-2 rounded bg-primary"></span>
+            <span class="w-5 h-2 rounded bg-primary"></span>
+            <span class="w-5 h-2 rounded bg-primary"></span>
+          </div>
+        </div>
+        <div>
+          <p class="font-semibold" data-i18n="English">English (Advanced C1)</p>
+          <div class="flex space-x-1 mt-2">
+            <span class="w-5 h-2 rounded bg-primary"></span>
+            <span class="w-5 h-2 rounded bg-primary"></span>
+            <span class="w-5 h-2 rounded bg-primary"></span>
+            <span class="w-5 h-2 rounded bg-primary"></span>
+            <span class="w-5 h-2 rounded bg-gray-400 dark:bg-gray-700"></span>
+          </div>
+        </div>
+      </div>
+      <h3 class="text-xl font-semibold" data-i18n="DrivingLicense">Driving License</h3>
+      <p data-i18n="Categories">Categories: A2, B1</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-12 md:py-20 bg-cover bg-center bg-no-repeat bg-fixed px-4">
+    <div
+      class="container mx-auto max-w-4xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="Education">Education
+      </h2>
+      <div>
+        <h3 class="text-xl font-semibold" data-i18n="Profession">Software Engineer, B.S.</h3>
+        <p>Tecnológico de Antioquia Institución Universitaria, Medellín</p>
+        <p class="text-sm" data-i18n="Graduated">Graduated: 2024</p>
+      </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-12 md:py-20 bg-cover bg-center bg-no-repeat bg-fixed px-4">
+    <div
+      class="container mx-auto max-w-4xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="WorkExperience">Work
+        Experience</h2>
+      <!-- Repeat for each experience -->
+      <div class="mb-6">
+        <h3 class="text-lg md:text-xl font-semibold break-words" data-i18n="Evertec">
+          Bilingual Implementation Analyst
+        </h3>
+        <p class="italic text-sm md:text-base">Evertec Inc, Medellín | Feb 2025 - Apr 2025</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-sm md:text-base">
+          <li data-i18n="Evertec1">
+            Created 1 layout template with React and Tailwind to optimize
+            sales and implementation processes.
+          </li>
+          <li data-i18n="Evertec2">Complied with SLAs.</li>
+        </ul>
+      </div>
+      <div class="mb-6">
+        <h3 class="text-lg md:text-xl font-semibold break-words" data-i18n="Gobernacion">
+          Internship at Gobernación de Antioquia
+        </h3>
+        <p class="italic text-sm md:text-base">
+          Gobernación de Antioquia, Medellín | Feb 2024 - Jun 2024
         </p>
-        <h3 class="text-xl font-semibold mb-2" data-i18n="Skills">Skills</h3>
-        <ul class="flex flex-wrap gap-2 mb-6">
-          <li class="bg-primary text-white px-3 py-1 rounded">C++</li>
-          <li class="bg-primary text-white px-3 py-1 rounded">Python</li>
-          <li class="bg-primary text-white px-3 py-1 rounded">Javascript</li>
-          <li class="bg-primary text-white px-3 py-1 rounded">SQL</li>
-          <li class="bg-primary text-white px-3 py-1 rounded">Git</li>
-          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Troubleshooting">Troubleshooting</li>
-          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="DetailOriented">Detail Oriented</li>
-          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Teamwork">Teamwork</li>
-          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Analysis">Analysis</li>
-          <li class="bg-primary text-white px-3 py-1 rounded" data-i18n="Writing">Writing</li>
-
+        <ul class="list-disc list-inside mt-2 space-y-1 text-sm md:text-base">
+          <li data-i18n="Gobernacion1">
+            Improved a platform made in Laravel (PHP) with PostgreSQL,
+            cleaning and refactoring more than 30 files.
+          </li>
+          <li data-i18n="Gobernacion2">
+            Solved 6 security breaches within headers and server settings.
+          </li>
+          <li data-i18n="Gobernacion3">Documented 5 processes and additions in Markdown format.</li>
         </ul>
-        <h3 class="text-xl font-semibold mb-2" data-i18n="Languages">Languages</h3>
-        <div class="space-y-4 flex-col">
-          <div>
-            <p class="font-semibold" data-i18n="Spanish">Spanish (Native)</p>
-            <div class="flex space-x-1 mt-2">
-              <span class="w-5 h-2 rounded bg-primary"></span>
-              <span class="w-5 h-2 rounded bg-primary"></span>
-              <span class="w-5 h-2 rounded bg-primary"></span>
-              <span class="w-5 h-2 rounded bg-primary"></span>
-              <span class="w-5 h-2 rounded bg-primary"></span>
-            </div>
-          </div>
-          <div>
-            <p class="font-semibold" data-i18n="English">English (Advanced C1)</p>
-            <div class="flex space-x-1 mt-2">
-              <span class="w-5 h-2 rounded bg-primary"></span>
-              <span class="w-5 h-2 rounded bg-primary"></span>
-              <span class="w-5 h-2 rounded bg-primary"></span>
-              <span class="w-5 h-2 rounded bg-primary"></span>
-              <span class="w-5 h-2 rounded bg-gray-400 dark:bg-gray-700"></span>
-            </div>
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold" data-i18n="DrivingLicense">Driving License</h3>
-        <p data-i18n="Categories">Categories: A2, B1</p>
       </div>
-    </section>
-
-    <!-- Education Section -->
-    <section
-      id="education"
-      class="py-12 md:py-20 bg-cover bg-center bg-no-repeat bg-fixed px-4"
-    >
-      <div
-        class="container mx-auto max-w-3xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg"
-      >
-        <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="Education">Education</h2>
-        <div>
-          <h3 class="text-xl font-semibold" data-i18n="Profession">Software Engineer, B.S.</h3>
-          <p>Tecnológico de Antioquia Institución Universitaria, Medellín</p>
-          <p class="text-sm" data-i18n="Graduated">Graduated: 2024</p>  
+      <div class="mb-6">
+        <h3 class="text-lg md:text-xl font-semibold break-words" data-i18n="Webhelp">Bilingual Support Agent</h3>
+        <p class="italic text-sm md:text-base">Webhelp, Medellín | Mar 2022 - Feb 2024</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-sm md:text-base">
+          <li data-i18n="Webhelp1">
+            Provided customer support for technical, legal, and
+            product-related inquiries with over 90% customer satisfaction
+            ratio.
+          </li>
+          <li data-i18n="Webhelp2">Presented 4 workshops for efficiency improvement.</li>
+        </ul>
       </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section
-      id="experience"
-      class="py-12 md:py-20 bg-cover bg-center bg-no-repeat bg-fixed px-4"
-    >
-      <div
-        class="container mx-auto max-w-4xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg"
-      >
-        <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="WorkExperience">Work Experience</h2>
-        <!-- Repeat for each experience -->
-        <div class="mb-6">
-          <h3 class="text-lg md:text-xl font-semibold break-words" data-i18n="Evertec">
-            Bilingual Implementation Analyst
-          </h3>
-          <p class="italic text-sm md:text-base">Evertec Inc, Medellín | Feb 2025 - Apr 2025</p>
-          <ul class="list-disc list-inside mt-2 space-y-1 text-sm md:text-base">
-            <li data-i18n="Evertec1">
-              Created 1 layout template with React and Tailwind to optimize
-              sales and implementation processes.
-            </li>
-            <li data-i18n="Evertec2">Complied with SLAs.</li>
-          </ul>
-        </div>
-        <div class="mb-6">
-          <h3 class="text-lg md:text-xl font-semibold break-words" data-i18n="Gobernacion">
-            Internship at Gobernación de Antioquia
-          </h3>
-          <p class="italic text-sm md:text-base">
-            Gobernación de Antioquia, Medellín | Feb 2024 - Jun 2024
-          </p>
-          <ul class="list-disc list-inside mt-2 space-y-1 text-sm md:text-base">
-            <li data-i18n="Gobernacion1">
-              Improved a platform made in Laravel (PHP) with PostgreSQL,
-              cleaning and refactoring more than 30 files.
-            </li>
-            <li data-i18n="Gobernacion2">
-              Solved 6 security breaches within headers and server settings.
-            </li>
-            <li data-i18n="Gobernacion3">Documented 5 processes and additions in Markdown format.</li>
-          </ul>
-        </div>
-        <div class="mb-6">
-          <h3 class="text-lg md:text-xl font-semibold break-words" data-i18n="Webhelp">Bilingual Support Agent</h3>
-          <p class="italic text-sm md:text-base">Webhelp, Medellín | Mar 2022 - Feb 2024</p>
-          <ul class="list-disc list-inside mt-2 space-y-1 text-sm md:text-base">
-            <li data-i18n="Webhelp1">
-              Provided customer support for technical, legal, and
-              product-related inquiries with over 90% customer satisfaction
-              ratio.
-            </li>
-            <li data-i18n="Webhelp2">Presented 4 workshops for efficiency improvement.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg md:text-xl font-semibold break-words" data-i18n="Areatic">Junior Web Developer</h3>
-          <p class="italic text-sm md:text-base">Areatic, Medellín | Jul 2019 - Dec 2021</p>
-          <ul class="list-disc list-inside mt-2 space-y-1 text-sm md:text-base">
-            <li data-i18n="Areatic1">
-              Implemented a computational vision library with C++ for automated
-              license plate recognition with over 88% accuracy.
-            </li>
-            <li data-i18n="Areatic2">
-              Developed 2 TCP/IP sockets in C++ and Python for real-time license
-              plate submission.
-            </li>
-            <li data-i18n="Areatic3">Implemented video streaming protocols as RTSP.</li>
-            <li data-i18n="Areatic4">
-              Created 2 web modules with Angular (JS) to audit the automated
-              license plate recognition.
-            </li>
-          </ul>
-        </div>
+      <div>
+        <h3 class="text-lg md:text-xl font-semibold break-words" data-i18n="Areatic">Junior Web Developer</h3>
+        <p class="italic text-sm md:text-base">Areatic, Medellín | Jul 2019 - Dec 2021</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-sm md:text-base">
+          <li data-i18n="Areatic1">
+            Implemented a computational vision library with C++ for automated
+            license plate recognition with over 88% accuracy.
+          </li>
+          <li data-i18n="Areatic2">
+            Developed 2 TCP/IP sockets in C++ and Python for real-time license
+            plate submission.
+          </li>
+          <li data-i18n="Areatic3">Implemented video streaming protocols as RTSP.</li>
+          <li data-i18n="Areatic4">
+            Created 2 web modules with Angular (JS) to audit the automated
+            license plate recognition.
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section (Updated) -->
-    <section
-      id="contact"
-      class="py-20 bg-cover bg-center"
-      style="
+  <!-- Contact Section (Updated) -->
+  <section id="contact" class="py-20 bg-cover bg-center" style="
         background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f');
-      "
-    >
-      <div
-        class="container mx-auto px-6 max-w-3xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center dark:bg-gray-800 dark:bg-opacity-80"
-      >
-        <h2
-          class="text-2xl font-bold mb-4 text-dark dark:text-white"
-          data-i18n="Contact"
-        >
-          Contact
-        </h2>
-        <p class="mb-2 flex justify-center items-center gap-2">
-          <i class="ph ph-envelope text-primary"></i><span>Email:</span>
-          <a href="mailto:jacu.13c@gmail.com" class="text-primary" data-i18n="Email"
-            >jacu.13c@gmail.com</a
-          >
-        </p>
-        <p class="mb-2 flex justify-center items-center gap-2">
-          <i class="ph ph-phone text-primary"></i><span data-i18n="Phone">Phone: +57
+      ">
+    <div
+      class="container mx-auto px-6 max-w-3xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center dark:bg-gray-800 dark:bg-opacity-80">
+      <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white" data-i18n="Contact">
+        Contact
+      </h2>
+      <p class="mb-2 flex justify-center items-center gap-2">
+        <i class="ph ph-envelope text-primary"></i><span>Email:</span>
+        <a href="mailto:jacu.13c@gmail.com" class="text-primary" data-i18n="Email">jacu.13c@gmail.com</a>
+      </p>
+      <p class="mb-2 flex justify-center items-center gap-2">
+        <i class="ph ph-phone text-primary"></i><span data-i18n="Phone">Phone: +57
           3203161289</span>
-        </p>
-        <p class="mb-4 flex justify-center items-center gap-2">
-          <i class="ph ph-map-pin text-primary"></i
-          ><span data-i18n="Location">Location: Medellín, Colombia</span> 
-        </p>
-        <a
-          href="https://wa.me/573203161289"
-          target="_blank"
-          class="inline-block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-          data-i18n="WhatsApp"
-          >Contact via WhatsApp</a
-        >
-      </div>
-    </section>
+      </p>
+      <p class="mb-4 flex justify-center items-center gap-2">
+        <i class="ph ph-map-pin text-primary"></i><span data-i18n="Location">Location: Medellín, Colombia</span>
+      </p>
+      <a href="https://wa.me/573203161289" target="_blank"
+        class="inline-block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600" data-i18n="WhatsApp">Contact
+        via WhatsApp</a>
+    </div>
+  </section>
 
-    <main>
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          document.querySelectorAll("nav a").forEach((link) => {
-            link.addEventListener("click", (e) => {
-              e.preventDefault();
-              const targetId = link.getAttribute("href").substring(1);
-              const section = document.getElementById(targetId);
-              section.scrollIntoView({ behavior: "smooth" });
-            });
+  <main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("nav a").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const section = document.getElementById(targetId);
+            section.scrollIntoView({ behavior: "smooth" });
           });
+        });
 
-          // Dark Mode Toggle with persistence
-          const themeToggle = document.getElementById("themeToggle");
-          
-          // Check for saved theme preference
-          if (localStorage.getItem('theme') === 'dark' || 
-              (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
+        // Dark Mode Toggle with persistence
+        const themeToggle = document.getElementById("themeToggle");
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark' ||
+          (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+
+        themeToggle.addEventListener("click", () => {
+          const isDark = document.documentElement.classList.toggle("dark");
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Language Toggle
+        const i18nMap = {
+          en: {
+            //Header
+            Home: "Home",
+            About: "About",
+            Education: "Education",
+            Experience: "Experience",
+            Contact: "Contact",
+            //Projects
+            Projects: "Projects",
+            LicensePlateRecognition: "License Plate Recognition System",
+            LicensePlateRecognitionDesc: "Computer vision application developed in C++ using OpenCV. Achieves 88% accuracy in automated license plate detection and recognition. Includes real-time processing and TCP/IP socket implementation.",
+            FullStackRepository: "Full-Stack Web Repository",
+            FullStackRepositoryDesc: "I was part of the team that deployed a web repository called Siseduca to provide visibility and data analysis on the status of educational institutions in Antioquia.",
+            ProjectLink: "Click for more info.",
+            WebPortfolio: "Web Portfolio",
+            WebPortfolioDesc: "Extremely light-weighted portfolio made with JavaScript, HTML5 and Tailwind CSS V2.0 to showcase my professional and personal projects.",
+            SheetMacroExtension: "Sheet Macro Extension",
+            SheetMacroExtensionDesc: "Local hosted macro extension made to improve efficiency while working on a web browser, without compromising sensitive information. This extension works by providing it a google drive's URL to a Google Sheets file.",
+            //About
+            Languages: "Languages",
+            Role: "Software Developer Specializing in Data Analytics",
+            Linkedin: "LinkedIn Profile",
+            Description: "Software developer specializing in data analytics, skilled in teamwork and customer relations. Proficient in multiple programming languages and technologies, with a focus on delivering efficient and secure solutions.",
+            Skills: "Skills",
+            Troubleshooting: "Troubleshooting",
+            DetailOriented: "Detail Oriented",
+            Teamwork: "Teamwork",
+            Analysis: "Analysis",
+            Writing: "Writing",
+            Spanish: "Spanish (Native)",
+            English: "English (Advanced C1)",
+            DrivingLicense: "Driving License",
+            Categories: "Categories: A2, B1",
+            //Education
+            Profession: "Software Engineer, B.S.",
+            Graduated: "Graduated: 2024",
+            //Experience
+            WorkExperience: "Work Experience",
+            Evertec: "Bilingual Implementation Analyst",
+            Evertec1: "Created 1 layout template with React and Tailwind to optimize sales and implementation processes.",
+            Evertec2: "Complied with SLAs.",
+            Gobernacion: "Internship at Gobernación de Antioquia",
+            Gobernacion1: "Improved a platform made in Laravel (PHP) with PostgreSQL, cleaning and refactoring more than 30 files.",
+            Gobernacion2: "Solved 6 security breaches within headers and server settings.",
+            Gobernacion3: "Documented 5 processes and additions in Markdown format.",
+            Webhelp: "Bilingual Customer Service Agent",
+            Webhelp1: "Provided customer support for technical, legal, and product-related inquiries with over 90% customer satisfaction ratio.",
+            Webhelp2: "Presented 4 workshops for efficiency improvement.",
+            Areatic: "Junior Web Developer",
+            Areatic1: "Implemented a computational vision library with C++ for automated license plate recognition with over 88% accuracy.",
+            Areatic2: "Developed 2 TCP/IP sockets in C++ and Python for real-time license plate submission.",
+            Areatic3: "Implemented video streaming protocols as RTSP.",
+            Areatic4: "Created 2 web modules with Angular (JS) to audit the automated license plate recognition.",
+            //Contact
+            Phone: " Phone: +57 3203161289",
+            Location: "Location: Medellín, Colombia",
+            WhatsApp: "Contact via WhatsApp"
+          },
+          es: {
+            Home: "Inicio",
+            About: "Sobre mí",
+            Education: "Educación",
+            Experience: "Experiencia",
+            Contact: "Contacto",
+            //Projects
+            Projects: "Proyectos",
+            LicensePlateRecognition: "Sistema de Reconocimiento Automático de Placas",
+            LicensePlateRecognitionDesc: "Aplicación de visión computacional desarrollada en C++ utilizando OpenCV. Logra un 88% de precisión en la detección y reconocimiento automático de placas. Incluye procesamiento en tiempo real e implementación de sockets TCP/IP.",
+            FullStackRepository: "Full-Stack Web Repository",
+            FullStackRepositoryDesc: "Fui parte del equipo que desplegó a producción el repositorio web llamado Siseduca para brindar visibilidad y análisis de datos sobre el estado de las instituciones educativas en Antioquia.",
+            ProjectLink: "Clic para más información.",
+            WebPortfolio: "Portafolio Web",
+            WebPortfolioDesc: "Portafolio extremadamente ligero hecho con JavaScript, HTML5 y Tailwind CSS V2.0 para mostrar mis proyectos profesionales y personales.",
+            SheetMacroExtension: "Sheet Macro Extension",
+            SheetMacroExtensionDesc: "Extensión de macros alojada localmente hecha para mejorar la eficiencia al trabajar en un navegador web, sin comprometer información sensible. Esta extensión funciona proporcionando una URL de Google Drive a un archivo de Google Sheets.",
+            //About
+            Languages: "Idiomas",
+            Role: "Desarrollador de Software en especialización en Análisis de Datos",
+            Linkedin: "Perfil de LinkedIn",
+            Description: "Desarrollador de software en especialización en análisis de datos, hábil en trabajo en equipo y relaciones con clientes. Competente en múltiples lenguajes de programación y tecnologías, con enfoque en entregar soluciones eficientes y seguras.",
+            Skills: "Habilidades",
+            Troubleshooting: "Resolución de Problemas",
+            DetailOriented: "Orientado al Detalle",
+            Teamwork: "Trabajo en Equipo",
+            Analysis: "Análisis",
+            Writing: "Redacción",
+            Spanish: "Español (Nativo)",
+            English: "Inglés (Avanzado C1)",
+            DrivingLicense: "Licencia de Conducción",
+            Categories: "Categorías: A2, B1",
+            //Education
+            Profession: "Ingeniero de Software",
+            Graduated: "Graduado: 2024",
+            //Experience
+            WorkExperience: "Experiencia Laboral",
+            Evertec: "Analista de Implementación Bilingüe",
+            Evertec1: "Creé 1 plantilla de diseño con React y Tailwind para optimizar procesos de ventas e implementación.",
+            Evertec2: "Cumplí a cabalidad con las métricas estipuladas.",
+            Gobernacion: "Practicante de Excelencia en Gobernación de Antioquia",
+            Gobernacion1: "Mejoré una plataforma hecha en Laravel (PHP) con PostgreSQL, limpiando y refactorizando más de 30 archivos.",
+            Gobernacion2: "Resolví 6 brechas de seguridad en encabezados y configuraciones del servidor.",
+            Gobernacion3: "Documenté 5 procesos y adiciones en formato Markdown.",
+            Webhelp: "Agente de Soporte Bilingüe",
+            Webhelp1: "Brindé soporte al cliente para consultas técnicas, legales y relacionadas con productos con más del 90% de satisfacción del cliente.",
+            Webhelp2: "Presenté 4 talleres para mejora de eficiencia.",
+            Areatic: "Desarrollador Web Junior",
+            Areatic1: "Implementé una librería de visión computacional con C++ para reconocimiento automatizado de placas con más del 88% de precisión.",
+            Areatic2: "Desarrollé 2 sockets TCP/IP en C++ y Python para envío de placas en tiempo real.",
+            Areatic3: "Implementé protocolos de transmisión de video como RTSP.",
+            Areatic4: "Creé 2 módulos web con Angular (JS) para auditar el reconocimiento automatizado de placas.",
+            //Contact
+            Phone: "Teléfono: +57 3203161289",
+            Location: "Ubicación: Medellín, Colombia",
+            WhatsApp: "Contactar por WhatsApp"
           }
-
-          themeToggle.addEventListener("click", () => {
-            const isDark = document.documentElement.classList.toggle("dark");
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-          });
-
-          // Language Toggle
-          const i18nMap = {
-            en: {
-              Home: "Home",
-              About: "About",
-              Education: "Education",
-              Experience: "Experience",
-              Contact: "Contact",
-              Languages: "Languages",
-              Role: "Software Developer Specializing in Data Analytics",
-              Linkedin: "LinkedIn Profile",
-              Description: "Software developer specializing in data analytics, skilled in teamwork and customer relations. Proficient in multiple programming languages and technologies, with a focus on delivering efficient and secure solutions.",
-              Skills: "Skills",
-              Troubleshooting: "Troubleshooting",
-              DetailOriented: "Detail Oriented",
-              Teamwork: "Teamwork",
-              Analysis: "Analysis",
-              Writing: "Writing",
-              Spanish: "Spanish (Native)",
-              English: "English (Advanced C1)",
-              DrivingLicense: "Driving License",
-              Categories: "Categories: A2, B1",
-              Profession: "Software Engineer, B.S.",
-              Graduated: "Graduated: 2024",
-              WorkExperience: "Work Experience",
-              Evertec: "Bilingual Implementation Analyst",
-              Evertec1: "Created 1 layout template with React and Tailwind to optimize sales and implementation processes.",
-              Evertec2: "Complied with SLAs.",
-              Gobernacion: "Internship at Gobernación de Antioquia",
-              Gobernacion1: "Improved a platform made in Laravel (PHP) with PostgreSQL, cleaning and refactoring more than 30 files.",
-              Gobernacion2: "Solved 6 security breaches within headers and server settings.",
-              Gobernacion3: "Documented 5 processes and additions in Markdown format.",
-              Webhelp: "Bilingual Customer Service Agent",
-              Webhelp1: "Provided customer support for technical, legal, and product-related inquiries with over 90% customer satisfaction ratio.",
-              Webhelp2: "Presented 4 workshops for efficiency improvement.",
-              Areatic: "Junior Web Developer",
-              Areatic1: "Implemented a computational vision library with C++ for automated license plate recognition with over 88% accuracy.",
-              Areatic2: "Developed 2 TCP/IP sockets in C++ and Python for real-time license plate submission.",
-              Areatic3: "Implemented video streaming protocols as RTSP.",
-              Areatic4: "Created 2 web modules with Angular (JS) to audit the automated license plate recognition.",
-              Phone:" Phone: +57 3203161289",
-              Location: "Location: Medellín, Colombia",
-              WhatsApp: "Contact via WhatsApp"
-            },
-            es: {
-              Home: "Inicio",
-              About: "Sobre mí",
-              Education: "Educación",
-              Experience: "Experiencia",
-              Contact: "Contacto",
-              Languages: "Idiomas",
-              Role: "Desarrollador de Software en especialización en Análisis de Datos",
-              Linkedin: "Perfil de LinkedIn",
-              Description: "Desarrollador de software en especialización en análisis de datos, hábil en trabajo en equipo y relaciones con clientes. Competente en múltiples lenguajes de programación y tecnologías, con enfoque en entregar soluciones eficientes y seguras.",
-              Skills: "Habilidades",
-              Troubleshooting: "Resolución de Problemas",
-              DetailOriented: "Orientado al Detalle",
-              Teamwork: "Trabajo en Equipo",
-              Analysis: "Análisis",
-              Writing: "Redacción",
-              Spanish: "Español (Nativo)",
-              English: "Inglés (Avanzado C1)",
-              DrivingLicense: "Licencia de Conducción",
-              Categories: "Categorías: A2, B1",
-              Profession: "Ingeniero de Software",
-              Graduated: "Graduado: 2024",
-              WorkExperience: "Experiencia Laboral",
-              Evertec: "Analista de Implementación Bilingüe",
-              Evertec1: "Creé 1 plantilla de diseño con React y Tailwind para optimizar procesos de ventas e implementación.",
-              Evertec2: "Cumplí a cabalidad con las métricas estipuladas.",
-              Gobernacion: "Practicante de Excelencia en Gobernación de Antioquia",
-              Gobernacion1: "Mejoré una plataforma hecha en Laravel (PHP) con PostgreSQL, limpiando y refactorizando más de 30 archivos.",
-              Gobernacion2: "Resolví 6 brechas de seguridad en encabezados y configuraciones del servidor.",
-              Gobernacion3: "Documenté 5 procesos y adiciones en formato Markdown.",
-              Webhelp: "Agente de Soporte Bilingüe",
-              Webhelp1: "Brindé soporte al cliente para consultas técnicas, legales y relacionadas con productos con más del 90% de satisfacción del cliente.",
-              Webhelp2: "Presenté 4 talleres para mejora de eficiencia.",
-              Areatic: "Desarrollador Web Junior",
-              Areatic1: "Implementé una librería de visión computacional con C++ para reconocimiento automatizado de placas con más del 88% de precisión.",
-              Areatic2: "Desarrollé 2 sockets TCP/IP en C++ y Python para envío de placas en tiempo real.",
-              Areatic3: "Implementé protocolos de transmisión de video como RTSP.",
-              Areatic4: "Creé 2 módulos web con Angular (JS) para auditar el reconocimiento automatizado de placas.",
-              Phone: "Teléfono: +57 3203161289",
-              Location: "Ubicación: Medellín, Colombia",
-              WhatsApp: "Contactar por WhatsApp"
+        };
+        let currentLang = "en";
+        const langToggle = document.getElementById("langToggle");
+        langToggle.addEventListener("click", () => {
+          currentLang = currentLang === "en" ? "es" : "en";
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            if (i18nMap[currentLang][key]) {
+              el.textContent = i18nMap[currentLang][key];
             }
-          };
-          let currentLang = "en";
-          const langToggle = document.getElementById("langToggle");
-          langToggle.addEventListener("click", () => {
-            currentLang = currentLang === "en" ? "es" : "en";
-            document.querySelectorAll("[data-i18n]").forEach((el) => {
-              const key = el.getAttribute("data-i18n");
-              if (i18nMap[currentLang][key]) {
-                el.textContent = i18nMap[currentLang][key];
-              }
-            });
           });
+        });
 
-          // Mobile menu toggle
-          const menuToggle = document.getElementById("menuToggle");
-          const navMenu = document.getElementById("navMenu");
-          
-          menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("hidden");
-            navMenu.classList.toggle("flex");
-            navMenu.classList.toggle("flex-col");
-            navMenu.classList.toggle("absolute");
-            navMenu.classList.toggle("top-14");
-            navMenu.classList.toggle("left-0");
-            navMenu.classList.toggle("w-full");
-            navMenu.classList.toggle("bg-dark");
-            navMenu.classList.toggle("dark:bg-gray-800");
-            navMenu.classList.toggle("p-4");
-          });
+        // Mobile menu toggle
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
 
-          // Close mobile menu when clicking outside
-          document.addEventListener("click", (e) => {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        menuToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("hidden");
+          navMenu.classList.toggle("flex");
+          navMenu.classList.toggle("flex-col");
+          navMenu.classList.toggle("absolute");
+          navMenu.classList.toggle("top-14");
+          navMenu.classList.toggle("left-0");
+          navMenu.classList.toggle("w-full");
+          navMenu.classList.toggle("bg-dark");
+          navMenu.classList.toggle("dark:bg-gray-800");
+          navMenu.classList.toggle("p-4");
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+            navMenu.classList.add("hidden");
+            navMenu.classList.remove("flex", "flex-col", "absolute", "top-14", "left-0", "w-full", "bg-dark", "dark:bg-gray-800", "p-4");
+          }
+        });
+
+        // Close mobile menu when clicking a link
+        navMenu.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth < 768) { // md breakpoint
               navMenu.classList.add("hidden");
               navMenu.classList.remove("flex", "flex-col", "absolute", "top-14", "left-0", "w-full", "bg-dark", "dark:bg-gray-800", "p-4");
             }
           });
+        });
+      });
+    </script>
 
-          // Close mobile menu when clicking a link
-          navMenu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-              if (window.innerWidth < 768) { // md breakpoint
-                navMenu.classList.add("hidden");
-                navMenu.classList.remove("flex", "flex-col", "absolute", "top-14", "left-0", "w-full", "bg-dark", "dark:bg-gray-800", "p-4");
-              }
-            });
+    <!--Carousel-->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const slidesContainer = document.getElementById('slides-container');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('[data-index]');
+
+        let currentSlide = 0;
+        const slideCount = 4;
+
+        function updateSlide(index) {
+          currentSlide = index;
+          slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+          // Update dots
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('bg-primary', i === currentSlide);
+            dot.classList.toggle('bg-dark/50', i !== currentSlide);
+          });
+        }
+
+        prevBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+          updateSlide(currentSlide);
+        });
+
+        nextBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide + 1) % slideCount;
+          updateSlide(currentSlide);
+        });
+
+        dots.forEach((dot) => {
+          dot.addEventListener('click', () => {
+            updateSlide(parseInt(dot.dataset.index));
           });
         });
-      </script>
-    </main>
-  </body>
+
+        // Auto-advance slides every 5 seconds
+        setInterval(() => {
+          currentSlide = (currentSlide + 1) % slideCount;
+          updateSlide(currentSlide);
+        }, 10000);
+      });
+    </script>
+  </main>
+</body>
+
 </html>
