@@ -33,6 +33,9 @@
           },
           animation: {
             pulseSlow: "pulse 4s ease-in-out infinite",
+            bounce1: "bounce 1s infinite",
+            bounce2: "bounce 1s infinite 200ms",
+            bounce3: "bounce 1s infinite 400ms",
           },
         },
       },
@@ -104,6 +107,14 @@
           class="inline-block mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-blue-700"
           data-i18n="Linkedin">LinkedIn Profile</a>
       </div>
+    </div>
+
+    <!-- Scroll Indicator Arrows -->
+    <div class="mt-8 flex flex-col items-center">
+      <p class="text-primary mb-2" data-i18n="ScrollDown">Scroll down to see more</p>
+      <i class="ph ph-caret-down text-2xl text-primary animate-bounce1 w-10"></i>
+      <i class="ph ph-caret-down text-2xl text-primary animate-bounce2 w-10"></i>
+      <i class="ph ph-caret-down text-2xl text-primary animate-bounce3 w-10"></i>
     </div>
   </section>
 
@@ -255,7 +266,6 @@
       class="container mx-auto max-w-4xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-4 md:p-8 rounded-lg shadow-lg">
       <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white transition-colors" data-i18n="WorkExperience">Work
         Experience</h2>
-      <!-- Repeat for each experience -->
       <div class="mb-6">
         <h3 class="text-lg md:text-xl font-semibold break-words" data-i18n="Evertec">
           Bilingual Implementation Analyst
@@ -321,7 +331,7 @@
     </div>
   </section>
 
-  <!-- Contact Section (Updated) -->
+  <!-- Contact Section -->
   <section id="contact" class="py-20 bg-cover bg-center" style="
         background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f');
       ">
@@ -334,16 +344,9 @@
         <i class="ph ph-envelope text-primary"></i><span>Email:</span>
         <a href="mailto:jacu.13c@gmail.com" class="text-primary" data-i18n="Email">jacu.13c@gmail.com</a>
       </p>
-      <p class="mb-2 flex justify-center items-center gap-2">
-        <i class="ph ph-phone text-primary"></i><span data-i18n="Phone">Phone: +57
-          3203161289</span>
-      </p>
       <p class="mb-4 flex justify-center items-center gap-2">
         <i class="ph ph-map-pin text-primary"></i><span data-i18n="Location">Location: Medellín, Colombia</span>
       </p>
-      <a href="https://wa.me/573203161289" target="_blank"
-        class="inline-block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600" data-i18n="WhatsApp">Contact
-        via WhatsApp</a>
     </div>
   </section>
 
@@ -359,10 +362,9 @@
           });
         });
 
-        // Dark Mode Toggle with persistence
+        // Theme Toggle
         const themeToggle = document.getElementById("themeToggle");
 
-        // Check for saved theme preference
         if (localStorage.getItem('theme') === 'dark' ||
           (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
           document.documentElement.classList.add('dark');
@@ -429,9 +431,8 @@
             Areatic3: "Implemented video streaming protocols as RTSP.",
             Areatic4: "Created 2 web modules with Angular (JS) to audit the automated license plate recognition.",
             //Contact
-            Phone: " Phone: +57 3203161289",
             Location: "Location: Medellín, Colombia",
-            WhatsApp: "Contact via WhatsApp"
+            ScrollDown: "Scroll down to see more"
           },
           es: {
             Home: "Inicio",
@@ -486,9 +487,8 @@
             Areatic3: "Implementé protocolos de transmisión de video como RTSP.",
             Areatic4: "Creé 2 módulos web con Angular (JS) para auditar el reconocimiento automatizado de placas.",
             //Contact
-            Phone: "Teléfono: +57 3203161289",
             Location: "Ubicación: Medellín, Colombia",
-            WhatsApp: "Contactar por WhatsApp"
+            ScrollDown: "Desplázate hacia abajo para ver más"
           }
         };
         let currentLang = "en";
@@ -540,7 +540,7 @@
       });
     </script>
 
-    <!--Carousel-->
+    <!--Slider-->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const slidesContainer = document.getElementById('slides-container');
@@ -555,7 +555,6 @@
           currentSlide = index;
           slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-          // Update dots
           dots.forEach((dot, i) => {
             dot.classList.toggle('bg-primary', i === currentSlide);
             dot.classList.toggle('bg-dark/50', i !== currentSlide);
@@ -578,7 +577,6 @@
           });
         });
 
-        // Auto-advance slides every 5 seconds
         setInterval(() => {
           currentSlide = (currentSlide + 1) % slideCount;
           updateSlide(currentSlide);
