@@ -50,16 +50,22 @@
 <body class="bg-light text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors" role="document">
   <!-- Language + Theme Toggle -->
   <div class="fixed top-4 right-4 flex gap-4 z-50">
-    <button id="themeToggle"
-      class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
-      aria-label="Toggle theme">
-      <i class="ph ph-sun dark:ph-moon text-xl"></i>
-    </button>
-    <button id="langToggle"
-      class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
-      aria-label="Toggle language">
-      <i class="ph ph-translate text-xl"></i>
-    </button>
+    <div class="relative group">
+      <button id="themeToggle"
+        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
+        aria-label="Toggle theme">
+        <i class="ph ph-sun dark:ph-moon text-xl"></i>
+      </button>
+      <button id="langToggle"
+        class="px-3 py-1 bg-dark text-white rounded hover:bg-gray-700 dark:bg-white dark:text-black transition-colors"
+        aria-label="Toggle language">
+        <i class="ph ph-translate text-xl"></i>
+      </button>
+      <div id="Tooltip" class="absolute right-0 top-full mt-4 bg-dark text-white dark:bg-white dark:text-black rounded px-3 py-1 text-base whitespace-nowrap flex items-center gap-2 shadow-lg">
+        <span data-i18n="Tooltip">Change Theme / Language</span>
+        <button class="text-xs hover:text-primary" onclick="this.parentElement.style.display='none'">✕</button>
+      </div>
+    </div>
   </div>
 
   <!-- Header -->
@@ -445,7 +451,7 @@
             src="data:image/jpeg;base64,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">
           <div class="p-2 text-center">
             <h3 class="text-sm font-semibold dark:text-white" data-i18n="GameDev">Introduction to Game Development</h3>
-          </div>
+          </div>  
         </div>
 
       </div>
@@ -453,10 +459,10 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-dark text-dark dark:bg-gray-800 transition-colors">
+  <section id="contact" class="py-20 bg-dark text-dark dark:bg-gray-700 transition-colors">
     <div
-      class="container mx-auto px-6 max-w-3xl bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center dark:bg-gray-800 dark:bg-opacity-80">
-      <h2 class="text-2xl font-bold mb-4 text-dark dark:text-white" data-i18n="Contact">
+      class="container mx-auto px-6 max-w-3xl bg-white p-8 rounded-lg shadow-lg text-center dark:bg-gray-800 text-dark dark:text-white">
+      <h2 class="text-2xl font-bold mb-4" data-i18n="Contact">
         Contact
       </h2>
       <p class="mb-2 flex justify-center items-center gap-2">
@@ -503,6 +509,7 @@
             Education: "Education",
             Experience: "Experience",
             Contact: "Contact",
+            Tooltip: "Change Theme / Language",
             //Projects
             Projects: "Projects",
             LicensePlateRecognition: "License Plate Recognition System",
@@ -573,6 +580,7 @@
             Education: "Educación",
             Experience: "Experiencia",
             Contact: "Contacto",
+            Tooltip: "Cambiar Tema / Idioma",
             //Projects
             Projects: "Proyectos",
             LicensePlateRecognition: "Sistema de Reconocimiento Automático de Placas",
@@ -586,7 +594,7 @@
             SheetMacroExtensionDesc: "Extensión de macros alojada localmente hecha para mejorar la eficiencia al trabajar en un navegador web, sin comprometer información sensible. Esta extensión funciona proporcionando una URL de Google Sheets.",
             //About
             Languages: "Idiomas",
-            Role: "Desarrollador Web Front-End Y Analista de Datos",
+            Role: "Desarrollador Web Front-End y Analista de Datos",
             Linkedin: "Perfil de LinkedIn",
             Description: "Ingeniero en software en especialización en análisis de datos, hábil en trabajo en equipo y relaciones con clientes. Competente en múltiples lenguajes de programación y tecnologías, con enfoque en entregar soluciones eficientes y seguras.",
             Skills: "Habilidades",
