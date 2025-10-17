@@ -664,6 +664,176 @@
   <main>
     <script>
       let currentLang = "en";
+      const i18nMap = {
+        en: {
+          //Header
+          Home: "Home",
+          About: "About",
+          Experience: "Experience",
+          Education: "Education",
+          Certificates: "Certificates",
+          Contact: "Contact",
+          Tooltip: "Change Theme / Language",
+          //Projects
+          Projects: "Projects",
+          LicensePlateRecognition: "License Plate Recognition System",
+          LicensePlateRecognitionDesc: "Computer vision application developed in C++ using OpenCV. Achieves 88% accuracy in automated license plate detection and recognition. Includes real-time processing and TCP/IP socket implementation.",
+          FullStackRepository: "Full-Stack Web Repository",
+          FullStackRepositoryDesc: "I was part of the team that deployed a web repository called Siseduca to provide visibility and data analysis on the status of educational institutions in Antioquia.",
+          ProjectLink: "Click for more info.",
+          WebPortfolio: "Web Portfolio",
+          WebPortfolioDesc: "Light-weighted portfolio made with JavaScript, HTML5 and Tailwind CSS V2.0 to showcase my professional and personal projects.",
+          SheetMacroExtension: "Sheet Macro Extension",
+          SheetMacroExtensionDesc: "Local hosted macro extension made to improve efficiency while working on a web browser, without compromising sensitive information. This extension works by providing it a URL to a Google Sheets file.",
+          //About
+          Languages: "Languages",
+          Role: "Web Front-End Developer & Data Analyst",
+          Linkedin: "LinkedIn Profile",
+          Description: "Software engineer specializing in data analytics, skilled in teamwork and customer relationships. Proficient in multiple programming languages and technologies, with a focus on delivering efficient and secure solutions.",
+          Skills: "Skills",
+          ServiceDesk: "Service Desk",
+          Troubleshooting: "Troubleshooting",
+          DetailOriented: "Detail Oriented",
+          Teamwork: "Teamwork",
+          Analysis: "Analysis",
+          Writing: "Writing",
+          Relationships: "Customer Relationships",
+          CVDownload: "Download CV",
+          Passions: "Passions",
+          Traveling: "Traveling",
+          Music: "Music",
+          VideoGames: "Video Games",
+          Spanish: "Spanish (Native)",
+          English: "English (Advanced C1)",
+          DrivingLicense: "Driving License",
+          Categories: "Categories: A2, B1",
+          //Education
+          Profession: "Software Engineer, B.S.",
+          Graduated: "Graduated: 2024",
+          //Experience
+          WorkExperience: "Work Experience",
+          Evertec: "Bilingual Implementation Analyst",
+          Evertec1: "Created 1 layout template with React and Tailwind to optimize sales and implementation processes.",
+          Evertec2: "Complied with SLAs.",
+          Gobernacion: "Internship at Gobernación de Antioquia",
+          Gobernacion1: "Improved a platform made in Laravel (PHP) with PostgreSQL, cleaning and refactoring more than 30 files.",
+          Gobernacion2: "Solved 6 security breaches within headers and server settings.",
+          Gobernacion3: "Documented 5 processes and additions in Markdown format.",
+          Webhelp: "Bilingual Customer Service Agent",
+          Webhelp1: "Provided customer support for technical, legal, and product-related inquiries with over 90% customer satisfaction ratio.",
+          Webhelp2: "Presented 4 workshops for efficiency improvement.",
+          Areatic: "Junior Web Developer",
+          Areatic1: "Implemented a computational vision library with C++ for automated license plate recognition with over 88% accuracy.",
+          Areatic2: "Developed 2 TCP/IP sockets in C++ and Python for real-time license plate submission.",
+          Areatic3: "Implemented real-time video streaming protocols as RTSP.",
+          Areatic4: "Created 2 web modules with Angular to audit the automated license plate recognition.",
+          //Certificates
+          Certificates: "Certificates",
+          CEFRC1English: "CEFR C1 English",
+          Scrum: "Advanced Scrum",
+          GameDev: "Introduction to Game Development",
+          Interview: "Coding Interview Preparation",
+          Questions: "Ask Questions to Make Data-Driven Decisions",
+          Fundamentals: "Fundamentals of Programming and Software Engineering",
+          AIDev: "Introduction to development with AI",
+          Terminal: "Introduction to the Terminal and Command Line",
+          JavaScript: "Fundamentals of JavaScript",
+          Git: "Git and GitHub",
+          ProfessionalWeb: "Fundamentals of Professional Web Development",
+          Networks: "Internet Computer Networks",
+          Cryptography: "Fundamentals of Cryptography",
+          Sources: "Click for sources",
+          ShowMore: "Show more",
+          ShowLess: "Show less",
+          //Contact
+          Location: "Location: Medellín, Colombia",
+          ScrollDown: "Scroll down to see more"
+        },
+        es: {
+          //Header
+          Home: "Inicio",
+          About: "Sobre mí",
+          Experience: "Experiencia",
+          Education: "Educación",
+          Certificates: "Certificados",
+          Contact: "Contacto",
+          Tooltip: "Cambiar Tema / Idioma",
+          //Projects
+          Projects: "Proyectos",
+          LicensePlateRecognition: "Sistema de Reconocimiento Automático de Placas",
+          LicensePlateRecognitionDesc: "Aplicación de visión computacional desarrollada en C++ utilizando OpenCV. Logra un 88% de precisión en la detección y reconocimiento automático de placas. Incluye procesamiento en tiempo real e implementación de sockets TCP/IP.",
+          FullStackRepository: "Full-Stack Web Repository",
+          FullStackRepositoryDesc: "Fui parte del equipo que desplegó a producción el repositorio web llamado Siseduca para brindar visibilidad y análisis de datos sobre el estado de las instituciones educativas en Antioquia.",
+          ProjectLink: "Clic para más información.",
+          WebPortfolio: "Portafolio Web",
+          WebPortfolioDesc: "Portafolio ligero hecho con JavaScript, HTML5 y Tailwind CSS V2.0 para mostrar mis proyectos profesionales y personales.",
+          SheetMacroExtension: "Sheet Macro Extension",
+          SheetMacroExtensionDesc: "Extensión de macros alojada localmente hecha para mejorar la eficiencia al trabajar en un navegador web, sin comprometer información sensible. Esta extensión funciona proporcionando una URL de Google Sheets.",
+          //About
+          Languages: "Idiomas",
+          Role: "Desarrollador Web Front-End y Analista de Datos",
+          Linkedin: "Perfil de LinkedIn",
+          Description: "Ingeniero en software en especialización en análisis de datos, hábil en trabajo en equipo y relaciones con clientes. Competente en múltiples lenguajes de programación y tecnologías, con enfoque en entregar soluciones eficientes y seguras.",
+          Skills: "Habilidades",
+          ServiceDesk: "Mesa de Ayuda",
+          Troubleshooting: "Resolución de Problemas",
+          DetailOriented: "Orientado al Detalle",
+          Teamwork: "Trabajo en Equipo",
+          Analysis: "Análisis",
+          Writing: "Redacción",
+          Relationships: "Relaciones con Clientes",
+          CVDownload: "Descargar CV (Hoja de vida)",
+          Passions: "Pasiones",
+          Traveling: "Viajes",
+          Music: "Música",
+          VideoGames: "Videojuegos",
+          Spanish: "Español (Nativo)",
+          English: "Inglés (Avanzado C1)",
+          DrivingLicense: "Licencia de Conducción",
+          Categories: "Categorías: A2, B1",
+          //Education
+          Profession: "Ingeniero en Software",
+          Graduated: "Graduado: 2024",
+          //Experience
+          WorkExperience: "Experiencia Laboral",
+          Evertec: "Analista de Implementación Bilingüe",
+          Evertec1: "Creé 1 plantilla de diseño con React y Tailwind para optimizar procesos de ventas e implementación.",
+          Evertec2: "Cumplí a cabalidad con las métricas estipuladas.",
+          Gobernacion: "Practicante de Excelencia en Gobernación de Antioquia",
+          Gobernacion1: "Mejoré una plataforma hecha en Laravel (PHP) con PostgreSQL, limpiando y refactorizando más de 30 archivos.",
+          Gobernacion2: "Resolví 6 brechas de seguridad en encabezados y configuraciones del servidor.",
+          Gobernacion3: "Documenté 5 procesos y adiciones en formato Markdown.",
+          Webhelp: "Agente de Soporte Bilingüe",
+          Webhelp1: "Brindé soporte al cliente para consultas técnicas, legales y relacionadas con productos con más del 90% de satisfacción del cliente.",
+          Webhelp2: "Presenté 4 talleres para mejora de eficiencia.",
+          Areatic: "Desarrollador Web Junior",
+          Areatic1: "Implementé una librería de visión computacional con C++ para reconocimiento automatizado de placas con más del 88% de precisión.",
+          Areatic2: "Desarrollé 2 sockets TCP/IP en C++ y Python para envío de placas en tiempo real.",
+          Areatic3: "Implementé protocolos de transmisión de video en tiempo real como RTSP.",
+          Areatic4: "Creé 2 módulos web con Angular para auditar el reconocimiento automatizado de placas.",
+          //Certificates
+          Certificates: "Certificados",
+          CEFRC1English: "Inglés C1 del MCER",
+          Scrum: "Scrum avanzado",
+          GameDev: "Introducción al desarrollo de videojuegos",
+          Interview: "Preparación para entrevistas de programación",
+          Questions: "Formular preguntas para tomar decisiones basadas en datos",
+          Fundamentals: "Fundamentos de programación e Ingeniería de Software",
+          AIDev: "Iniciación al desarrollo con IA",
+          Terminal: "Introducción a la Terminal y Línea de Comandos",
+          JavaScript: "Fundamentos de JavaScript",
+          Git: "Git y GitHub",
+          ProfessionalWeb: "Fundamentos del Desarrollo Web Profesional",
+          Networks: "Redes Informáticas de Internet",
+          Cryptography: "Fundamentos de Criptografía",
+          Sources: "Clic para fuentes",
+          ShowMore: "Mostrar más",
+          ShowLess: "Mostrar menos",
+          //Contact
+          Location: "Ubicación: Medellín, Colombia",
+          ScrollDown: "Desplázate hacia abajo para ver más"
+        }
+      };
       document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("nav a").forEach((link) => {
           link.addEventListener("click", (e) => {
@@ -686,178 +856,6 @@
           const isDark = document.documentElement.classList.toggle("dark");
           localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
-
-        // Language Toggle
-        const i18nMap = {
-          en: {
-            //Header
-            Home: "Home",
-            About: "About",
-            Experience: "Experience",
-            Education: "Education",
-            Certificates: "Certificates",
-            Contact: "Contact",
-            Tooltip: "Change Theme / Language",
-            //Projects
-            Projects: "Projects",
-            LicensePlateRecognition: "License Plate Recognition System",
-            LicensePlateRecognitionDesc: "Computer vision application developed in C++ using OpenCV. Achieves 88% accuracy in automated license plate detection and recognition. Includes real-time processing and TCP/IP socket implementation.",
-            FullStackRepository: "Full-Stack Web Repository",
-            FullStackRepositoryDesc: "I was part of the team that deployed a web repository called Siseduca to provide visibility and data analysis on the status of educational institutions in Antioquia.",
-            ProjectLink: "Click for more info.",
-            WebPortfolio: "Web Portfolio",
-            WebPortfolioDesc: "Light-weighted portfolio made with JavaScript, HTML5 and Tailwind CSS V2.0 to showcase my professional and personal projects.",
-            SheetMacroExtension: "Sheet Macro Extension",
-            SheetMacroExtensionDesc: "Local hosted macro extension made to improve efficiency while working on a web browser, without compromising sensitive information. This extension works by providing it a URL to a Google Sheets file.",
-            //About
-            Languages: "Languages",
-            Role: "Web Front-End Developer & Data Analyst",
-            Linkedin: "LinkedIn Profile",
-            Description: "Software engineer specializing in data analytics, skilled in teamwork and customer relationships. Proficient in multiple programming languages and technologies, with a focus on delivering efficient and secure solutions.",
-            Skills: "Skills",
-            ServiceDesk: "Service Desk",
-            Troubleshooting: "Troubleshooting",
-            DetailOriented: "Detail Oriented",
-            Teamwork: "Teamwork",
-            Analysis: "Analysis",
-            Writing: "Writing",
-            Relationships: "Customer Relationships",
-            CVDownload: "Download CV",
-            Passions: "Passions",
-            Traveling: "Traveling",
-            Music: "Music",
-            VideoGames: "Video Games",
-            Spanish: "Spanish (Native)",
-            English: "English (Advanced C1)",
-            DrivingLicense: "Driving License",
-            Categories: "Categories: A2, B1",
-            //Education
-            Profession: "Software Engineer, B.S.",
-            Graduated: "Graduated: 2024",
-            //Experience
-            WorkExperience: "Work Experience",
-            Evertec: "Bilingual Implementation Analyst",
-            Evertec1: "Created 1 layout template with React and Tailwind to optimize sales and implementation processes.",
-            Evertec2: "Complied with SLAs.",
-            Gobernacion: "Internship at Gobernación de Antioquia",
-            Gobernacion1: "Improved a platform made in Laravel (PHP) with PostgreSQL, cleaning and refactoring more than 30 files.",
-            Gobernacion2: "Solved 6 security breaches within headers and server settings.",
-            Gobernacion3: "Documented 5 processes and additions in Markdown format.",
-            Webhelp: "Bilingual Customer Service Agent",
-            Webhelp1: "Provided customer support for technical, legal, and product-related inquiries with over 90% customer satisfaction ratio.",
-            Webhelp2: "Presented 4 workshops for efficiency improvement.",
-            Areatic: "Junior Web Developer",
-            Areatic1: "Implemented a computational vision library with C++ for automated license plate recognition with over 88% accuracy.",
-            Areatic2: "Developed 2 TCP/IP sockets in C++ and Python for real-time license plate submission.",
-            Areatic3: "Implemented real-time video streaming protocols as RTSP.",
-            Areatic4: "Created 2 web modules with Angular to audit the automated license plate recognition.",
-            //Certificates
-            Certificates: "Certificates",
-            CEFRC1English: "CEFR C1 English",
-            Scrum: "Advanced Scrum",
-            GameDev: "Introduction to Game Development",
-            Interview: "Coding Interview Preparation",
-            Questions: "Ask Questions to Make Data-Driven Decisions",
-            Fundamentals: "Fundamentals of Programming and Software Engineering",
-            AIDev: "Introduction to development with AI",
-            Terminal: "Introduction to the Terminal and Command Line",
-            JavaScript: "Fundamentals of JavaScript",
-            Git: "Git and GitHub",
-            ProfessionalWeb: "Fundamentals of Professional Web Development",
-            Networks: "Internet Computer Networks",
-            Cryptography: "Fundamentals of Cryptography",
-            Sources: "Click for sources",
-            ShowMore: "Show more",
-            ShowLess: "Show less",
-            //Contact
-            Location: "Location: Medellín, Colombia",
-            ScrollDown: "Scroll down to see more"
-          },
-          es: {
-            //Header
-            Home: "Inicio",
-            About: "Sobre mí",
-            Experience: "Experiencia",
-            Education: "Educación",
-            Certificates: "Certificados",
-            Contact: "Contacto",
-            Tooltip: "Cambiar Tema / Idioma",
-            //Projects
-            Projects: "Proyectos",
-            LicensePlateRecognition: "Sistema de Reconocimiento Automático de Placas",
-            LicensePlateRecognitionDesc: "Aplicación de visión computacional desarrollada en C++ utilizando OpenCV. Logra un 88% de precisión en la detección y reconocimiento automático de placas. Incluye procesamiento en tiempo real e implementación de sockets TCP/IP.",
-            FullStackRepository: "Full-Stack Web Repository",
-            FullStackRepositoryDesc: "Fui parte del equipo que desplegó a producción el repositorio web llamado Siseduca para brindar visibilidad y análisis de datos sobre el estado de las instituciones educativas en Antioquia.",
-            ProjectLink: "Clic para más información.",
-            WebPortfolio: "Portafolio Web",
-            WebPortfolioDesc: "Portafolio ligero hecho con JavaScript, HTML5 y Tailwind CSS V2.0 para mostrar mis proyectos profesionales y personales.",
-            SheetMacroExtension: "Sheet Macro Extension",
-            SheetMacroExtensionDesc: "Extensión de macros alojada localmente hecha para mejorar la eficiencia al trabajar en un navegador web, sin comprometer información sensible. Esta extensión funciona proporcionando una URL de Google Sheets.",
-            //About
-            Languages: "Idiomas",
-            Role: "Desarrollador Web Front-End y Analista de Datos",
-            Linkedin: "Perfil de LinkedIn",
-            Description: "Ingeniero en software en especialización en análisis de datos, hábil en trabajo en equipo y relaciones con clientes. Competente en múltiples lenguajes de programación y tecnologías, con enfoque en entregar soluciones eficientes y seguras.",
-            Skills: "Habilidades",
-            ServiceDesk: "Mesa de Ayuda",
-            Troubleshooting: "Resolución de Problemas",
-            DetailOriented: "Orientado al Detalle",
-            Teamwork: "Trabajo en Equipo",
-            Analysis: "Análisis",
-            Writing: "Redacción",
-            Relationships: "Relaciones con Clientes",
-            CVDownload: "Descargar CV (Hoja de vida)",
-            Passions: "Pasiones",
-            Traveling: "Viajes",
-            Music: "Música",
-            VideoGames: "Videojuegos",
-            Spanish: "Español (Nativo)",
-            English: "Inglés (Avanzado C1)",
-            DrivingLicense: "Licencia de Conducción",
-            Categories: "Categorías: A2, B1",
-            //Education
-            Profession: "Ingeniero en Software",
-            Graduated: "Graduado: 2024",
-            //Experience
-            WorkExperience: "Experiencia Laboral",
-            Evertec: "Analista de Implementación Bilingüe",
-            Evertec1: "Creé 1 plantilla de diseño con React y Tailwind para optimizar procesos de ventas e implementación.",
-            Evertec2: "Cumplí a cabalidad con las métricas estipuladas.",
-            Gobernacion: "Practicante de Excelencia en Gobernación de Antioquia",
-            Gobernacion1: "Mejoré una plataforma hecha en Laravel (PHP) con PostgreSQL, limpiando y refactorizando más de 30 archivos.",
-            Gobernacion2: "Resolví 6 brechas de seguridad en encabezados y configuraciones del servidor.",
-            Gobernacion3: "Documenté 5 procesos y adiciones en formato Markdown.",
-            Webhelp: "Agente de Soporte Bilingüe",
-            Webhelp1: "Brindé soporte al cliente para consultas técnicas, legales y relacionadas con productos con más del 90% de satisfacción del cliente.",
-            Webhelp2: "Presenté 4 talleres para mejora de eficiencia.",
-            Areatic: "Desarrollador Web Junior",
-            Areatic1: "Implementé una librería de visión computacional con C++ para reconocimiento automatizado de placas con más del 88% de precisión.",
-            Areatic2: "Desarrollé 2 sockets TCP/IP en C++ y Python para envío de placas en tiempo real.",
-            Areatic3: "Implementé protocolos de transmisión de video en tiempo real como RTSP.",
-            Areatic4: "Creé 2 módulos web con Angular para auditar el reconocimiento automatizado de placas.",
-            //Certificates
-            Certificates: "Certificados",
-            CEFRC1English: "Inglés C1 del MCER",
-            Scrum: "Scrum avanzado",
-            GameDev: "Introducción al desarrollo de videojuegos",
-            Interview: "Preparación para entrevistas de programación",
-            Questions: "Formular preguntas para tomar decisiones basadas en datos",
-            Fundamentals: "Fundamentos de programación e Ingeniería de Software",
-            AIDev: "Iniciación al desarrollo con IA",
-            Terminal: "Introducción a la Terminal y Línea de Comandos",
-            JavaScript: "Fundamentos de JavaScript",
-            Git: "Git y GitHub",
-            ProfessionalWeb: "Fundamentos del Desarrollo Web Profesional",
-            Networks: "Redes Informáticas de Internet",
-            Cryptography: "Fundamentos de Criptografía",
-            Sources: "Clic para fuentes",
-            ShowMore: "Mostrar más",
-            ShowLess: "Mostrar menos",
-            //Contact
-            Location: "Ubicación: Medellín, Colombia",
-            ScrollDown: "Desplázate hacia abajo para ver más"
-          }
-        };
         const langToggle = document.getElementById("langToggle");
         langToggle.addEventListener("click", () => {
           currentLang = currentLang === "en" ? "es" : "en";
@@ -964,22 +962,21 @@
               }
             });
 
-            const isExpanded = !articles[articles.length - 1].classList.contains('hidden');
-
-            console.log('Current Language:', currentLang);
-            // Use the global translation function if available
-            if (typeof updateTranslations === 'function' && typeof currentLang !== 'undefined') {
-              const showMoreText = translations[currentLang]['ShowMore'];
-              const showLessText = translations[currentLang]['ShowLess'] || 'Show less';
-              showMoreCertsBtn.textContent = isExpanded ? showLessText : showMoreText;
-            } else {
+            function translateShowMoreCertsBtn(currentLang, key) {
               showMoreCertsBtn.textContent = isExpanded ? 'Show less' : 'Show more';
+              if (i18nMap[currentLang][key]) {
+                showMoreCertsBtn.textContent = i18nMap[currentLang][key];
+              }            
             }
+
+            const isExpanded = !articles[articles.length - 1].classList.contains('hidden');
 
             if (isExpanded) {
               showMoreCertsBtn.setAttribute('data-i18n', 'ShowLess');
+              translateShowMoreCertsBtn(currentLang, 'ShowLess');
             } else {
               showMoreCertsBtn.setAttribute('data-i18n', 'ShowMore');
+              translateShowMoreCertsBtn(currentLang, 'ShowMore');
             }
           }
 
