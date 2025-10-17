@@ -511,7 +511,7 @@
       <a class="italic text-sm md:text-base" data-i18n="Sources" href="https://www.linkedin.com/in/jacu-c13/"
         target="_blank">Click for sources</a>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center pt-8">
+      <div id="certificatesGrid" class="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center pt-3">
 
         <article
           class="w-[150px] bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
@@ -637,6 +637,10 @@
         </article>
 
       </div>
+      <div class="text-center mt-4">
+        <button id="showMoreCerts" class="px-4 py-2 bg-blue-800 text-white rounded hover:bg-blue-700"
+          data-i18n="ShowMore">Show more</button>
+      </div>
     </div>
   </section>
 
@@ -659,6 +663,7 @@
 
   <main>
     <script>
+      let currentLang = "en";
       document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("nav a").forEach((link) => {
           link.addEventListener("click", (e) => {
@@ -762,6 +767,8 @@
             Networks: "Internet Computer Networks",
             Cryptography: "Fundamentals of Cryptography",
             Sources: "Click for sources",
+            ShowMore: "Show more",
+            ShowLess: "Show less",
             //Contact
             Location: "Location: Medellín, Colombia",
             ScrollDown: "Scroll down to see more"
@@ -844,12 +851,13 @@
             Networks: "Redes Informáticas de Internet",
             Cryptography: "Fundamentos de Criptografía",
             Sources: "Clic para fuentes",
+            ShowMore: "Mostrar más",
+            ShowLess: "Mostrar menos",
             //Contact
             Location: "Ubicación: Medellín, Colombia",
             ScrollDown: "Desplázate hacia abajo para ver más"
           }
         };
-        let currentLang = "en";
         const langToggle = document.getElementById("langToggle");
         langToggle.addEventListener("click", () => {
           currentLang = currentLang === "en" ? "es" : "en";
@@ -939,6 +947,53 @@
           currentSlide = (currentSlide + 1) % slideCount;
           updateSlide(currentSlide);
         }, 10000);
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const certificatesGrid = document.getElementById('certificatesGrid');
+        if (certificatesGrid) {
+          const showMoreCertsBtn = document.getElementById('showMoreCerts');
+          const articles = certificatesGrid.querySelectorAll('article');
+          const articlesToShow = 8; // 2 rows * 4 articles/row
+
+          function toggleCertificates() {
+            articles.forEach((article, index) => {
+              if (index >= articlesToShow) {
+                article.classList.toggle('hidden');
+              }
+            });
+
+            const isExpanded = !articles[articles.length - 1].classList.contains('hidden');
+
+            console.log('Current Language:', currentLang);
+            // Use the global translation function if available
+            if (typeof updateTranslations === 'function' && typeof currentLang !== 'undefined') {
+              const showMoreText = translations[currentLang]['ShowMore'];
+              const showLessText = translations[currentLang]['ShowLess'] || 'Show less';
+              showMoreCertsBtn.textContent = isExpanded ? showLessText : showMoreText;
+            } else {
+              showMoreCertsBtn.textContent = isExpanded ? 'Show less' : 'Show more';
+            }
+
+            if (isExpanded) {
+              showMoreCertsBtn.setAttribute('data-i18n', 'ShowLess');
+            } else {
+              showMoreCertsBtn.setAttribute('data-i18n', 'ShowMore');
+            }
+          }
+
+          if (articles.length > articlesToShow) {
+            articles.forEach((article, index) => {
+              if (index >= articlesToShow) {
+                article.classList.add('hidden');
+              }
+            });
+            showMoreCertsBtn.addEventListener('click', toggleCertificates);
+          } else {
+            showMoreCertsBtn.style.display = 'none';
+          }
+        }
       });
     </script>
   </main>
