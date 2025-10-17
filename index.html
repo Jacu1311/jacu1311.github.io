@@ -963,20 +963,24 @@
             });
 
             function translateShowMoreCertsBtn(currentLang, key) {
-              showMoreCertsBtn.textContent = isExpanded ? 'Show less' : 'Show more';
               if (i18nMap[currentLang][key]) {
                 showMoreCertsBtn.textContent = i18nMap[currentLang][key];
+              }
+              else{
+                showMoreCertsBtn.textContent = isExpanded ? 'Show less' : 'Show more';
               }            
             }
 
             const isExpanded = !articles[articles.length - 1].classList.contains('hidden');
 
             if (isExpanded) {
-              showMoreCertsBtn.setAttribute('data-i18n', 'ShowLess');
-              translateShowMoreCertsBtn(currentLang, 'ShowLess');
+              const key = 'ShowLess';
+              showMoreCertsBtn.setAttribute('data-i18n', key);
+              translateShowMoreCertsBtn(currentLang, key);
             } else {
-              showMoreCertsBtn.setAttribute('data-i18n', 'ShowMore');
-              translateShowMoreCertsBtn(currentLang, 'ShowMore');
+              const key = 'ShowMore';
+              showMoreCertsBtn.setAttribute('data-i18n', key);
+              translateShowMoreCertsBtn(currentLang, key);
             }
           }
 
